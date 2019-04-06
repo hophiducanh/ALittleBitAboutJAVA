@@ -1,0 +1,16 @@
+Java.lang and java.util are built in packages that contains
+classes that we use in the program eg.Java.lang contains
+classes System,String,StringBuffer etc.and java.util
+contains Date etc.
+
+Java.lang is a package which contains the classes like
+System, String, String Buffer etc., This package doesnt
+have to be explicitly imported as they are imported by
+default.
+Whereas Java.Util is a package which contains classes like
+Date, Vector, Dictionary, hashtable etc., This has to be
+imported everytime you use it in your program
+
+There is no need to import Java.lang package, it implicitly
+available toJava file whereas it is mandatory to import
+Java.util explicitly .

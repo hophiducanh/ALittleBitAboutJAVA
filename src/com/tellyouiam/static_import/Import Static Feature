@@ -1,0 +1,12 @@
+Let’s look at what’s happening in the code that’s using the static import feature:
+1. Even though the feature is commonly called “static import,” the syntax MUST be import
+static followed by the fully qualified name of the static member you want to import, or a
+wildcard. In this case, we’re doing a static import on the System class out object.
+2. In this case, we might want to use several of the static members of the java.lang.Integer
+class. This static import statement uses the wildcard to say, “I want to do static imports of ALLthe
+static members in this class.”
+3. Now we’re finally seeing the benefit of the static import feature! We didn’t have to type the
+System in System.out.println! Wow! Second, we didn’t have to type the Integer in
+Integer.MAX_VALUE. So in this line of code we were able to use a shortcut for a static method
+AND a constant.
+4. Finally, we do one more shortcut, this time for a method in the Integer class.
