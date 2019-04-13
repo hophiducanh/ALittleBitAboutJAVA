@@ -2,12 +2,14 @@ package com.tellyouiam.pass_by_reference_and_pass_by_value;
 
 public class PassByPrimitive {
    private static void modifyPrimitiveTypes(int x, int y) {
+       //Dễ dàng thấy biến x chưa, y chưa được dùng vì hàm modifyPrimitiveTypes(x, y) thao tác trên bản sao
+       //của x và y.
        x = 11;
        y = 111;
    }
 
     public static void main(String[] args) {
-        int x =69;
+        int x = 69;
         int y = 96;
         System.out.print("Value of x and y before modification: ");
         System.out.println("x = " + x + ";y =" +y);

@@ -1,0 +1,6 @@
+Trong Java, các đối số luôn luôn được truyền bằng giá trị. Bản sao sẽ là một tham chiếu hoặc một biến phụ thuộc vào loại biến ban đầu. Từ bây giờ, bạn có thể sử dụng các mẹo dưới đây để hiểu cách sửa đổi các đối số bên trong các method của mình để nó ảnh hưởng đến biến ban đầu:
+
+Modify giá trị của một đối số primitive sẽ không bao giờ ảnh hưởng đến biến ban đầu.
+Thay đổi tham chiếu đến một đối số đối tượng bên trong method sẽ không bao giờ ảnh hưởng đến tham chiếu ban đầu. Tuy nhiên, nó tạo ra một đối tượng hoàn toàn mới trong heap memory.
+Modify thuộc tính của một đối số đối tượng bên trong một method sẽ được phản ánh ra đối tượng ban đầu.
+Modify collections and maps bên trong method sẽ được phản ánh ra đối tượng ban đầu của chúng.
