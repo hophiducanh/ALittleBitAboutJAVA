@@ -1,0 +1,16 @@
+Abstract class vs Concrete class
+A class which is not abstract is referred as Concrete class. In the above example that we have seen in the beginning of this guide, Animal is a abstract class and Cat, Dog & Lion are concrete classes.
+
+Key Points:
+
+An abstract class has no use until unless it is extended by some other class.
+If you declare an abstract method in a class then you must declare the class abstract as well. you can’t have abstract method in a concrete class. It’s vice versa is not always true: If a class is not having any abstract method then also it can be marked as abstract.
+It can have non-abstract method (concrete) as well.
+I have covered the rules and examples of abstract methods in a separate tutorial, You can find the guide here: Abstract method in Java
+For now lets just see some basics and example of abstract method.
+1) Abstract method has no body.
+2) Always end the declaration with a semicolon(;).
+3) It must be overridden. An abstract class must be extended and in a same way abstract method must be overridden.
+4) A class has to be declared abstract to have abstract methods.
+
+Note: The class which is extending abstract class must override all the abstract methods.
