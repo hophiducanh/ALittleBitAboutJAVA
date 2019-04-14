@@ -8,6 +8,6 @@ public interface StaticIface {
         ;
     }
 //    final static void m3() {;}  //find not allowed inheritance
-//    abstract static void m4() {;} //abstract not allowed
-//    static void m5(); //nead a method body
+//    abstract static void m4() {;} //abstract not allowed, abstract don't have method body
+//    static void m5(); //nonabstract -> nead a method body
 }

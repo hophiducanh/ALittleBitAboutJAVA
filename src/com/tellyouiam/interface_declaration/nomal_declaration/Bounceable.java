@@ -4,8 +4,8 @@ package com.tellyouiam.interface_declaration.nomal_declaration;
 //you type abstract or not
 public abstract interface Bounceable {
 
-    //private final static -> create this variable only once. private final ->
-    //create this variable for every object. First one saves memory, go for it.
+    //private final static -> create this variable only once. private final ->create this variable for every object.
+    // First one saves memory, go for it.
     //Do interface không thể khởi tạo đối tượng nên static là hợp lí
     public static final int BAR = 42;
 
