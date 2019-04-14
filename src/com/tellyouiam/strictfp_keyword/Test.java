@@ -1,5 +1,8 @@
 package com.tellyouiam.strictfp_keyword;
-
+/**
+ * Remember, strictfp forces floating
+ * points (and any floating-point operations) to adhere to the IEEE 754 standard.
+* */
 public class Test {
     //https://vi.wikipedia.org/wiki/S%E1%BB%91_th%E1%BB%B1c_d%E1%BA%A5u_ph%E1%BA%A9y_%C4%91%E1%BB%99ng
     //Dấu phẩy động tuân theo chuẩn IEEE 754 (độ chính xác 23 bit, 8 bit mũ) lưu trữ với độ dài 32 bit.
