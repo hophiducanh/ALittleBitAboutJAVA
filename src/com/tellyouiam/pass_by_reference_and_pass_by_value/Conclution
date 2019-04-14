@@ -4,3 +4,5 @@ Modify giá trị của một đối số primitive sẽ không bao giờ ảnh 
 Thay đổi tham chiếu đến một đối số đối tượng bên trong method sẽ không bao giờ ảnh hưởng đến tham chiếu ban đầu. Tuy nhiên, nó tạo ra một đối tượng hoàn toàn mới trong heap memory.
 Modify thuộc tính của một đối số đối tượng bên trong một method sẽ được phản ánh ra đối tượng ban đầu.
 Modify collections and maps bên trong method sẽ được phản ánh ra đối tượng ban đầu của chúng.
+
+//  https://viblo.asia/p/truyen-doi-so-trong-java-co-the-ban-chua-biet-4P856gj9KY3#_3-tim-hieu-ve-vai-concern-2

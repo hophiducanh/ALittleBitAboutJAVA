@@ -1,4 +1,4 @@
-package com.tellyouiam.pass_by_reference_and_pass_by_value;
+package com.tellyouiam.pass_by_reference_and_pass_by_value.passbycollection;
 
 import java.util.ArrayList;
 import java.util.List;

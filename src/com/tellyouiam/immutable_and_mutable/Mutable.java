@@ -2,6 +2,9 @@ package com.tellyouiam.immutable_and_mutable;
 
 public class Mutable {
     public static void main(String[] args) {
+        //Calculate elapsed time
+        long start = System.nanoTime();
+
         //Initialize str1 = "first"
         StringBuffer str1 = new StringBuffer("first");
 
@@ -15,6 +18,9 @@ public class Mutable {
         System.out.println("str2:"+str2);
         //Ouput: str1: first-second
         //str2: first-second
+        long finish = System.nanoTime(); //nanosecond time
+        long timeElapsed = finish - start;
+        System.out.println(timeElapsed);
     }
 
 }
