@@ -34,3 +34,4 @@ public class PassByWrapperClass {
     //Vậy điều đó thực sự xảy ra như thế nào?
     //Chúng ta thấy tại (1)(2)(3)(4) đã chứng tỏ khá nhiều. Hãy đi đến ví dụ tiếp theo
 }
+//reference: http://chingovan.blogspot.com/2017/03/java-tham-chieu-va-tham-tri.html
