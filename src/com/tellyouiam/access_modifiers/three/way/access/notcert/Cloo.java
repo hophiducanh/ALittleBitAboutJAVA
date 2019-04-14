@@ -1,6 +1,6 @@
-package com.tellyouiam.access_modifiers.notcert;
+package com.tellyouiam.access_modifiers.three.way.access.notcert;
 
-import com.tellyouiam.access_modifiers.cert.Roo;
+import com.tellyouiam.access_modifiers.three.way.access.cert.Roo;
 
 public class Cloo extends Roo {
     //Có 3 cách để truy cập một phương thức

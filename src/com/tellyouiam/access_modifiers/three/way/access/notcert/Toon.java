@@ -1,4 +1,4 @@
-package com.tellyouiam.access_modifiers.notcert;
+package com.tellyouiam.access_modifiers.three.way.access.notcert;
 
 public class Toon {
     public static void main(String[] args) {
