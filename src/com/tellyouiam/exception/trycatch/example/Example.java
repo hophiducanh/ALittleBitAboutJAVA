@@ -1,6 +1,6 @@
 package com.tellyouiam.exception.trycatch.example;
 
-public class Example1 {
+public class Example {
     public static void main(String[] args) {
         //This code fall into UncheckedException, the compiler don't recognize and check whether Exception has occur
 

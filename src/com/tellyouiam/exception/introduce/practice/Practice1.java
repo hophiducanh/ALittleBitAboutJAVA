@@ -6,7 +6,7 @@ public class Practice1 {
         int i = Integer.parseInt("10");
 
         //Ctrl + B go to declaration will see:
-        //public static float parseFloat(String s) throws NumberFormatException ---> Ctrl + B to see declaration of NumberFormatException --->
+        //public static float parseFloat(String s) throws NumberFormatExceptionExample ---> Ctrl + B to see declaration of NumberFormatExceptionExample --->
         //IllegalArgumentException ----> RuntimeException (Hence i have conclusion: this is a runtime exception or unchecked exception)
         float f = Float.parseFloat("4.5a");
 
