@@ -8,6 +8,7 @@ public class UnCheckedException {
         int[] num = {1, 2, 3, 4};
 
         //Mảng không có phần tử thứ 5
-        System.out.println(num[5]);
+
+        //System.out.println(num[5]);
     }
 }
