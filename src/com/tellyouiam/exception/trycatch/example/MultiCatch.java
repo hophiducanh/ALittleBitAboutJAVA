@@ -14,7 +14,7 @@ public class MultiCatch {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             //Do FileNotFoundException là subclass của IOException nên chỉ cần khai báo IOException là đủ.
-            //Lấy ví dụ minh hoa thôi =)) . Có thể catch multi exception in one CATCH clause
+            //Lấy ví dụ minh hoa thôi =)) . Có thể catch multi exception in one CATCH clause bằng vertical line (|)
         } catch (IOException e) {
             e.printStackTrace();
         }
