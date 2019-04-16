@@ -6,7 +6,7 @@ import java.io.FileReader;
 
 public class CheckedException {
     //need throws FileNotFoundException
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         File file = new File("/etc");
 
         // Dòng code phía dưới sẽ gây ra CheckedException tức là Exception không vượt qua được cửa ải của Complier.
