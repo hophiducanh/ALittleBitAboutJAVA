@@ -3,7 +3,7 @@ package com.tellyouiam.arraydeclaration;
 /**
  *  Arrays can hold either primitives or object references, but an array itself
  * will always be an object on the heap, even if the array is declared to hold primitive elements. In other
- * words, there is no such thing as a primitive array, but you can make an array of primitives
+ * words, there is no such thing as ArrayDeclarationExample primitive array, but you can make an array of primitives
 * */
 public class ArrayDeclarationExample {
     //Arrays are declared by stating the type of elements the array will hold (an object or primitive),
@@ -15,7 +15,7 @@ public class ArrayDeclarationExample {
     //Square bracket after name (legal but less readable)
     int key1 [];
 
-    //The first example is a three-dimensional array (an array of arrays of arrays)
+    //The first example is OuterClass three-dimensional array (an array of arrays of arrays)
     String[][][] occupantName;
 
     //Two dimensional array (Khai báo vẫn hợp lệ với complier, NÓ HỢP LỆ KHÔNG CÓ NGHĨA LÀ NÓ "ĐÚNG")

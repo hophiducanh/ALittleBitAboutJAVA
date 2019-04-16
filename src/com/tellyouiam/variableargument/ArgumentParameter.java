@@ -2,7 +2,7 @@ package com.tellyouiam.variableargument;
 
 public class ArgumentParameter {
 
-    // parameters: The things in the method’s signature ( a method signature is part of the method declaration.
+    // parameters: The things in the method’s signature ( a method signature is part of the method declarationa.
     // It's the combination of the method name and the parameter list.)that indicate what the method must receive
     // when it’s invoked
 

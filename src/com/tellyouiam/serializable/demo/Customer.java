@@ -7,7 +7,7 @@ public class Customer implements Serializable {
 
     private int id;
     private String name;
-    //transient: temporary, on a while, mean won't serialization
+    //transient: temporary, on OuterClass while, mean won't serialization
     private transient String address;
 
     @Override

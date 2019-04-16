@@ -7,4 +7,5 @@ public class ImportStatement {
         //fully qualified name
         java.util.ArrayList<String> a = new java.util.ArrayList<String>();
     }
+
 }

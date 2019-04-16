@@ -24,7 +24,7 @@ public class ConstructorDeclaration {
 
     void ConstructorDeclaration() {}  //It's method not a constructor
 
-    //ConstructorDeclaration(short a); //like abstract method
+    //ConstructorDeclaration(short s); //like abstract method
 
     //static ConstructorDeclaration(float f) {} //can't be static
 
