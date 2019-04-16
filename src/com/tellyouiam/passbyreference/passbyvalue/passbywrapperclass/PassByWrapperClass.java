@@ -12,21 +12,27 @@ public class PassByWrapperClass {
         System.out.print("Values of obj1 & obj2 before wrapper modification: ");
         System.out.println("obj1 = " + obj1.intValue() + " ; obj2 = " + obj2.intValue());
         modifyWrappers(obj1, obj2);
+        //Giá trị có thay đổi nhưng cũng chỉ thay đổi trong thời gian gọi hàm vì nó là pass by value
+        System.out.println(modifyWrappers(obj1, obj2));
         System.out.print("Values of obj1 & obj2 after wrapper modification: ");
         System.out.println("obj1 = " + obj1.intValue() + " ; obj2 = " + obj2.intValue());
-        // Wrappers được lưu trữ bên trong heap memory với một tham chiếu bên trong stack memory.
+        //Explain: Wrappers được lưu trữ bên trong heap memory với một tham chiếu bên trong stack memory.
         // Nên khi gọi hàm modifyWrappers (), một bản sao cho mỗi tham chiếu được tạo ra bên trong stack memory,
         // và các bản sao được truyền vào medthod.
         // Bất kỳ sự thay đổi nào đối với tham chiếu bên trong method thực sự thay đổi tham chiếu
         // của các bản sao chứ không phải các tham chiếu ban đầu.
     }
-    private static void  modifyWrappers (Integer x, Integer y) {
+    private static Integer  modifyWrappers (Integer x, Integer y) {
+        /**
+         * The value new Integer(11) assign to "x" is never used có nghĩa là 2 tham chiếu trong STACK
+        * */
         //Truyền vào bản sao của obj1 và obj2
         x = new Integer(11); //(3)
         //x này tham chiếu đến địa chỉ ô nhớ có giá trị 11 trên bộ nhớ HEAP nên không thay đổi được giá trị ban đầu
         //của obj1 mà chỉ thay đổi giá trị bản sao. Để thay đổi giá trị ban đầu thì x phải trỏ đến địa chỉ ô nhớ
         // mà obj1 cũng đang trỏ tới
         y =  new Integer(111); //(4)
+        return x * y *2;
     }
     //Qua trường hợp này và PassByPrimitive chúng ta có thể thấy rằng với kiểu sữ liệu nguyên thủy hay
     //với kiểu dữ liệu object java đều PASS_BY_VALUE (Thao tác trên bản sao) nhưng cũng có một số trường hợp

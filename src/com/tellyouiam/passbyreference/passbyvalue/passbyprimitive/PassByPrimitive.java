@@ -2,8 +2,8 @@ package com.tellyouiam.passbyreference.passbyvalue.passbyprimitive;
 
 public class PassByPrimitive {
    private static void modifyPrimitiveTypes(int x, int y) {
-       //Dễ dàng thấy biến x chưa, y chưa được dùng vì hàm modifyPrimitiveTypes(x, y) thao tác trên bản sao
-       //của x và y.
+       //Dễ dàng thấy biến x chưa, y chưa được dùng, và thậm chí có được dùng(return, thực hiện tính toán trên biến)
+       // thì thứ sẽ thay đổi sẽ ở trên bản sao chứ không phải bản gốc
        x = 11;
        y = 111;
    }
