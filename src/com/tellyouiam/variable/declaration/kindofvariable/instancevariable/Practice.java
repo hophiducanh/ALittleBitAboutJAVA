@@ -1,4 +1,4 @@
-package com.tellyouiam.variable.declaration.referencevaribale.instancevariable;
+package com.tellyouiam.variable.declaration.kindofvariable.instancevariable;
 
 /**
  * Reference variables can be declared as static variables, instance variables, method parameters or local variables

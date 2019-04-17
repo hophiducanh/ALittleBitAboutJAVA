@@ -1,4 +1,4 @@
-package com.tellyouiam.variable.declaration.referencevaribale.localvariable;
+package com.tellyouiam.variable.declaration.kindofvariable.localvariable;
 
 /**
  * It is possible to declare a local variable with the same name as an instance variable. It’s known as

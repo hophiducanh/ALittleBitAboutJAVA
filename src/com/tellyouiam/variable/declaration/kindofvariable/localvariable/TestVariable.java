@@ -1,4 +1,4 @@
-package com.tellyouiam.variable.declaration.referencevaribale.localvariable;
+package com.tellyouiam.variable.declaration.kindofvariable.localvariable;
 
 public class TestVariable {
     public void logIn() {

@@ -1,4 +1,4 @@
-package com.tellyouiam.variable.declaration.referencevaribale.instancevariable;
+package com.tellyouiam.variable.declaration.kindofvariable.instancevariable;
 
 /**
  * Instance variables are defined inside the class, but outside of any method, and are initialized only when
