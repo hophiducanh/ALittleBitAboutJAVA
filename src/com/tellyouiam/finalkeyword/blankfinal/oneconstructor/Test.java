@@ -8,6 +8,8 @@ class Test
     // initialize here, then all objects get
     // the same value.  So we use blank final
 
+    //Nếu i không dùng trong constructor, thì khi khởi tạo biến final initialize giá trị cho nó, vì giá trị của biến
+    //final chỉ được set đúng một lần
     final int i;
 
     Test(int x)
@@ -16,6 +18,6 @@ class Test
         // must initialize i in constructor.
         // If we remove this line, we get compiler
         // error.
-        i = x;
+        this.i = x;
     }
 }
