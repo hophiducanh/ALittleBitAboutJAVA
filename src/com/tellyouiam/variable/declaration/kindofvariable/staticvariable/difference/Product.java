@@ -6,6 +6,13 @@ class Product {
     // If changes are made to that variable, all other instances will see the effect of the changes.
     private static int barcode;
 
+    /**
+     * Trong cùng một package nếu để public thay vì default sẽ phá vỡ nguyên tắc thiết kế của Java: Encapsulation
+    * */
+
+    //public int getBarcode() {
+    //        return barcode;
+    //    }
     int getBarcode() {
         return barcode;
     }
@@ -13,4 +20,7 @@ class Product {
     void setBarcode(int value) {
         barcode = value;
     }
+
+
+
 }
