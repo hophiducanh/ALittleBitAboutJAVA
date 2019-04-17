@@ -14,6 +14,7 @@ public class ConstructorDeclaration {
 
     ConstructorDeclaration() {}
 
+    //Constructor có thể để private
     private ConstructorDeclaration(Byte b) {}
 
     ConstructorDeclaration(int x, int... y) {}
