@@ -1,0 +1,3 @@
+Trong cùng một package nếu để public thay vì default sẽ phá vỡ nguyên tắc thiết kế của Java: Encapsulation.
+Những trường hợp còn lại cũng tương tự.
+
