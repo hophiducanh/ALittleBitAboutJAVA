@@ -1,4 +1,4 @@
-package com.tellyouiam.extendnomalclass;
+package com.tellyouiam.extendnormalclass;
 
 //Couldn't extends more Coo class
 //Java không hỗ trợ đa kế thừa cho class(abstract class) (Nếu trong Foo và Coo đều có chung A() method thì Boo biết kế thừa method

@@ -1,4 +1,4 @@
-package com.tellyouiam.extendnomalclass;
+package com.tellyouiam.extendnormalclass;
 
 class Foo {
     //some code here
