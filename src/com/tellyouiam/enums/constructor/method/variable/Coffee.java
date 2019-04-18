@@ -1,8 +1,11 @@
 package com.tellyouiam.enums.constructor.method.variable;
 
+import java.util.Arrays;
+
 public class Coffee {
     private CoffeeSize size;
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(CoffeeSize.values()));
 
         Coffee drink = new Coffee();
         drink.size = CoffeeSize.BIG;
