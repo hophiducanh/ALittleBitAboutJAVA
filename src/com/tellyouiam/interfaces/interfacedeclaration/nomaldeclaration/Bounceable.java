@@ -1,4 +1,4 @@
-package com.tellyouiam.interfacedeclaration.nomaldeclaration;
+package com.tellyouiam.interfaces.interfacedeclaration.nomaldeclaration;
 
 //interfaces are implicitly abstract whether
 //you type abstract or not

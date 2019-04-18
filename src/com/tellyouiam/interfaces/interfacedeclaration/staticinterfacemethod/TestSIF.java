@@ -1,4 +1,4 @@
-package com.tellyouiam.interfacedeclaration.staticinterfacemethod;
+package com.tellyouiam.interfaces.interfacedeclaration.staticinterfacemethod;
 
 public class TestSIF implements StaticIface{
     public static void main(String[] args) {

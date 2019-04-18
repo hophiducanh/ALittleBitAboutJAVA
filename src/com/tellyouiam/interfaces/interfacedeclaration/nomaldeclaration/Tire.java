@@ -1,4 +1,4 @@
-package com.tellyouiam.interfacedeclaration.nomaldeclaration;
+package com.tellyouiam.interfaces.interfacedeclaration.nomaldeclaration;
 
 public class Tire implements Bounceable {
 
