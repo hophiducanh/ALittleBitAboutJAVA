@@ -2,8 +2,8 @@ package com.tellyouiam.enums.constructor.method.variable;
 
 public class Coffee {
     private CoffeeSize size;
-
     public static void main(String[] args) {
+
         Coffee drink = new Coffee();
         drink.size = CoffeeSize.BIG;
 

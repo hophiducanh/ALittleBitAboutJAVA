@@ -12,4 +12,8 @@ public class Boo extends Foo {
         System.out.println(a);
     }
 
+    public static void main(String[] args) {
+        //Vẫn gọi bình thường không cần phải Boo boo = new Boo();
+        new Boo().A();
+    }
 }
