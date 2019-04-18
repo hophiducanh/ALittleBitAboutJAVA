@@ -1,5 +1,6 @@
 package com.tellyouiam.interfaces.multiple.inheritance;
 
+//Do một interface có thể extends nhiều interface nên có thể suy là luôn là một class có thể implements nhiều interface
 public class TestClass implements TestExtendsInterface {
 
     @Override

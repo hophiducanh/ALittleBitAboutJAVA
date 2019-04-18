@@ -2,6 +2,7 @@ package com.tellyouiam.finalkeyword.blankfinal.multiconstructor;
 
 
 public class Test {
+    //Nếu dùng static thì phải khởi tạo nó vì static là biến phạm vi lớp, initialized mỗi khi class initialized
     final public int i;
 
     //Không được gọi
