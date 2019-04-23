@@ -23,6 +23,48 @@ public class TestShapes {
         doShape(playerPiece); //Displaying Shape (belong to GameShape Class)
         doShape(tilePiece);  //Displaying Shape
 
+        //Chúng ta chỉ có một đối tượng nhưng lại có tới 4 Reference Type khác nhau. Vậy biến tham chiếu nào có thể
+        //gọi phương thức displayShape() ?
+
+        PlayerPiece player = new PlayerPiece();
+        Object o = player;
+        GameShape shape = player;
+        Animatable mover = player;
+
+
+        player.displayShape(); //Displaying Shape (Trường hợp này trong PlayerPiece không override lại phương thức
+        // của GameShape, còn nếu override lại thì sẽ gọi version displayShape() của PlayerPiece)
+        shape.displayShape();
+        mover.animate();
+
+
+        /**
+         * Remember that method invocations allowed by the compiler are based solely on the declared type of
+         * the reference, regardless of the object type (OCA) - Cái này quyết định bởi complier, tức là phương thức
+         * print() được gọi chỉ phương thức của superbclass, chứ không phải của Subclass. Điều này được xác định rõ
+         * ràng ngay tại compiler time chú không cần tại runtime.
+         * Ex:  PlayerPiece player = new PlayerPiece(); thì phương thức compiler cho phép reference variable player
+         * được gọi chỉ là phương thức của PlayerPiece.
+         * Animatable mover = new PlayerPiece(); mặc dù PlayerPiece implements Animatable nhưng compiler chỉ cho phép
+         * gọi phương thức của Animatable (Reference Type) nên không thể gọi phương thức displayShape();
+         * */
+
+        /**
+         * We’ve left out one big part of all this, which is that even though the compiler only knows about the
+         * declared reference type, the Java Virtual Machine (JVM) at runtime knows what the object really is. And
+         * that means that even if the PlayerPiece object’s displayShape() method is called using a GameShape
+         * reference variable, if the PlayerPiece overrides the displayShape() method, the JVM will invoke the
+         * PlayerPiece version! The JVM looks at the real object at the other end of the reference, “sees” that it
+         * has overridden the method of the declared reference variable type, and invokes the method of the object’s
+         * actual class. (OCA)
+         * */
+
+        /**
+         * Polymorphic method invocations apply only to instance methods. You can always refer to an object with a more general
+         * reference variable type (a superclass or interface), but at runtime, the ONLY things that are dynamically selected based on the
+         * actual object (rather than the reference type) are instance methods. Not static methods. Not variables. Only overridden
+         * instance methods are dynamically invoked based on the real object’s type.
+         * */
     }
 
     private static void doShape(GameShape shape) {

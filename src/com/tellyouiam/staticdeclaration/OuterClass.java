@@ -3,6 +3,7 @@ package com.tellyouiam.staticdeclaration;
 public class OuterClass {
     //static nested class (can't mark for top-level class)
     static class A {}
+    //Advantage of static class ???
 
     private void display() {
         //Can't mark static for local variable
