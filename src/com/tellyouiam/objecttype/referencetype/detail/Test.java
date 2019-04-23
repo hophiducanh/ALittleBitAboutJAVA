@@ -9,5 +9,9 @@ public class Test {
         Animal b = new Animal(); //both reference and object type are Animal
         Animal c = new Horse(); //reference type is Animal and object is Horse
         Horse h = new Horse(); //both reference and object type are Horse
+
+        //Reference Type không thể là subclass của ObjectType ???
+        //Horse d = new Animal();
     }
+
 }
