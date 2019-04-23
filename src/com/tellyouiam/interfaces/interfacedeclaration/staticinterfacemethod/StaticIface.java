@@ -5,7 +5,7 @@ public interface StaticIface {
         return 42;
     }
     public static void m2() {
-        ;
+        System.out.println("static keyword");
     }
 //    final static void m3() {;}  //find not allowed inheritance
 //    abstract static void m4() {;} //abstract not allowed, abstract don't have method body

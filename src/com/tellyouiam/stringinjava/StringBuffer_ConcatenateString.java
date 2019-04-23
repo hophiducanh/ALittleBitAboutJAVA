@@ -32,6 +32,7 @@ public class StringBuffer_ConcatenateString {
         StringBuffer str2 = new StringBuffer("Hello World!");
         str2.append(" Hello Yellow Code Books!");
     }
+    //instance initialization block
     {
         str3.append("Haha");
         //str2.append  //Bug do str2 được khai báo trong CodeBlocks, chỉ có hiệu lực trong phạm vi block

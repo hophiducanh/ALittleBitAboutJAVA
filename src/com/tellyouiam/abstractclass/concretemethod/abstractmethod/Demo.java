@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
 
 public class Demo extends MyClass {
 

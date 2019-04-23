@@ -12,7 +12,7 @@ public class ConstructorDeclaration {
      * LEGAL constructors
     * */
 
-    ConstructorDeclaration() {}
+    private ConstructorDeclaration() {}
 
     //Constructor có thể để private
     private ConstructorDeclaration(Byte b) {}

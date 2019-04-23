@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
 
   abstract class MyClass {
     // non-abstract method (concrete method)

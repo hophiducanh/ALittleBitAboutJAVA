@@ -11,10 +11,19 @@ public class Immutable {
     //String is immutable, any manipulation on String as well as create new object
     //str1.concat("-second") will return a new String object which value is "first-second"
     {
+        int a;
         str1 = str1.concat("-second");
         System.out.println("str1: "+str1);
         System.out.println("str2: "+str2);
     }
+
+    private int a;
+
+    {
+        a = 5;
+        int b = 5;
+    }
+
     //The only way to call system.out method without main method is
     //declare in code block. But we can't execute this method. huhu
 
@@ -25,5 +34,7 @@ public class Immutable {
         str1 = str1.concat("-second");
         System.out.println("str1: "+str1);
         System.out.println("str2: "+str2);
+        Immutable immutable = new Immutable();
+        System.out.println(immutable.a);
     }
 }
