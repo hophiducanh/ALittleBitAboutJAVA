@@ -10,6 +10,7 @@ package com.tellyouiam.initializationblock.staticblock;
  * or
  *
  * Instance initializers are also useful in anonymous inner classes, which can't declare any constructors at all. (docs)
+ * //Xem anonymous class
  *
  * */
 public class StaticBlock {
