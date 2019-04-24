@@ -1,4 +1,4 @@
-package com.tellyouiam.overriding.rules.invoke.superclassmethod;
+package com.tellyouiam.overriding.rules.invoke.superclassmethod.normalsuperclass;
 
 public class Parent {
     void show() {
