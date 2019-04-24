@@ -6,17 +6,21 @@ package com.tellyouiam.binding.staticbinding;
  * */
 
 public class NewClass {
+
+    static class SuperClass {
+        // Static method in base class which will be hidden in subclass
+        static void print() {
+            System.out.println("Print in SuperClass");
+        }
+    }
+
     public static class SubClass extends SuperClass {
+        // This method hides display() in Base
         static void print() {
             System.out.println("Print in SubClass");
         }
     }
 
-    static class SuperClass {
-        static void print() {
-            System.out.println("Print in SuperClass");
-        }
-    }
 
     public static void main(String[] args) {
         SuperClass a = new SuperClass(); //(1)

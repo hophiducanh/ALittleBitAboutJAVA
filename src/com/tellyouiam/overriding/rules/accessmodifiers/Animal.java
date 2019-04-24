@@ -1,4 +1,4 @@
-package com.tellyouiam.overriding;
+package com.tellyouiam.overriding.rules.accessmodifiers;
 
 public class Animal {
     /**

@@ -1,0 +1,9 @@
+Following are some important points for method overriding and static methods in Java.
+1) For class (or static) methods, the method according to the type of reference is called,
+not according to the object being referred, which means method call is decided at compile time.
+
+2) For instance (or non-static) methods, the method is called according to the type of object being referred,
+not according to the type of reference, which means method calls is decided at run time.
+
+3) An instance method cannot override a static method, and a static method cannot hide an instance method.
+ For example, the following program has two compiler errors.
