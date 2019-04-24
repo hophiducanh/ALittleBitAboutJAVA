@@ -1,4 +1,4 @@
-package com.tellyouiam.polymorphism;
+package com.tellyouiam.polymorphism.example;
 
 public class PlayerPiece extends GameShape implements Animatable{
     public void movePiece() {

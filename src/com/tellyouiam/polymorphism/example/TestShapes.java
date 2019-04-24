@@ -1,4 +1,4 @@
-package com.tellyouiam.polymorphism;
+package com.tellyouiam.polymorphism.example;
 
 /**
  * The doShapes() method knows only that the objects are a type of

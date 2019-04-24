@@ -1,4 +1,4 @@
-package com.tellyouiam.polymorphism;
+package com.tellyouiam.polymorphism.example;
 
 class GameShape {
     void displayShape() {
