@@ -15,5 +15,6 @@ public class Boo extends Foo {
     public static void main(String[] args) {
         //Vẫn gọi bình thường không cần phải Boo boo = new Boo();
         new Boo().A();
+        Foo foo = new Boo();
     }
 }
