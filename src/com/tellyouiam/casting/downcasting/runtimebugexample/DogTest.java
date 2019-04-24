@@ -11,4 +11,4 @@ public class DogTest {
             Dog d = (Dog) animal;
         }
     }
-}downcasting
+}
