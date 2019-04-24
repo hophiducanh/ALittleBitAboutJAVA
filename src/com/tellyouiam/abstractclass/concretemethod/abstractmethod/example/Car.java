@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod.example;
 
 abstract class Car {
     //Abstract method phải đi cùng void method.

@@ -31,9 +31,9 @@ public class TestShapes {
          * The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
          *
          * Any Java object that can pass more than one IS-A test is considered to be polymorphic.
-         * In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
+         * In Java, all Java objects are polymorphic since any object will paassss the IS-A test for their own type and for the class Object.
          * */
-        //Polymorphism h
+        //Polymorphism here. Đa hình có sẵn trong java vì Cl nào cũng là IS-A của Object class
         PlayerPiece player = new PlayerPiece();
         Object o = new PlayerPiece();
         GameShape shape = new PlayerPiece();

@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod.example;
 
  abstract class SUV extends Car{
      //một abstract class extends một abstract class không bắt buộc phải override lại,

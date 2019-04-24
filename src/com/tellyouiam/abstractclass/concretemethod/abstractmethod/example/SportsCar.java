@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod.example;
 
 public class SportsCar extends Car {
     //Optional

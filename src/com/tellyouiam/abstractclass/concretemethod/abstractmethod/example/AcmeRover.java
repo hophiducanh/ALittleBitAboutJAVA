@@ -1,4 +1,4 @@
-package com.tellyouiam.abstractclass.concretemethod.abstractmethod;
+package com.tellyouiam.abstractclass.concretemethod.abstractmethod.example;
 
 /**
  * Abstract class must be implemented by a nonabstract subclass. If the subclass
