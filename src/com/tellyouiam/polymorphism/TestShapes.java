@@ -17,7 +17,7 @@ public class TestShapes {
         PlayerPiece playerPiece = new PlayerPiece();
         TilePiece tilePiece = new TilePiece();
 
-        //Polymorphism here. We don't care actual object passed to doShape method is (PlayerPiece and TilePiece).
+        // We don't care actual object passed to doShape method is (PlayerPiece and TilePiece).
         //What we really are about is which reference object is (GameShape: superclass of PlayerPiece, TilePiece )
 
         doShape(playerPiece); //Displaying Shape (belong to GameShape Class)
@@ -26,10 +26,18 @@ public class TestShapes {
         //Chúng ta chỉ có một đối tượng nhưng lại có tới 4 Reference Type khác nhau. Vậy biến tham chiếu nào có thể
         //gọi phương thức displayShape() ?
 
+        /**
+         * Polymorphism is the ability of an object to take on many forms.
+         * The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object.
+         *
+         * Any Java object that can pass more than one IS-A test is considered to be polymorphic.
+         * In Java, all Java objects are polymorphic since any object will pass the IS-A test for their own type and for the class Object.
+         * */
+        //Polymorphism h
         PlayerPiece player = new PlayerPiece();
-        Object o = player;
-        GameShape shape = player;
-        Animatable mover = player;
+        Object o = new PlayerPiece();
+        GameShape shape = new PlayerPiece();
+        Animatable mover = new PlayerPiece();
 
 
         player.displayShape(); //Displaying Shape (Trường hợp này trong PlayerPiece không override lại phương thức
