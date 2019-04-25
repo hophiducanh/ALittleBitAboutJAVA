@@ -1,4 +1,4 @@
-package com.tellyouiam.constructor;
+package com.tellyouiam.constructor.declaration;
 
 public class ConstructorDeclaration {
     //Nhìn qua trông có vẻ constructor giống method nhưng điểm khác biệt chính ở đây
