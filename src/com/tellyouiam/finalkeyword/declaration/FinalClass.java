@@ -2,7 +2,7 @@ package com.tellyouiam.finalkeyword.declaration;
 
 /**
  * Biến final không thể thay đổi được, đó là đương nhiên. Nhưng trường hợp này chúng ta có thể thay đổi biến tham
- * chiếu (final reference variable) v
+ * chiếu (final reference variable)
  * */
 public class FinalClass {
     public static void main(String[] args)
@@ -13,7 +13,6 @@ public class FinalClass {
         System.out.println(objChildClass.UserId);
 
         objChildClass.UserId = 200;
-        System.out.println(objChildClass.UserId);
         System.out.println(objChildClass.UserId);
     }
 }

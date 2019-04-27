@@ -1,5 +1,9 @@
 package com.tellyouiam.staticdeclaration;
 
+/**
+ * Xem thêm static variable trong variable declaration package
+ * */
+
 public class OuterClass {
     //static nested class (can't mark for top-level class)
     static class A {}
