@@ -35,6 +35,24 @@ public class Geek {
             // the state of 'this' Object.
             return (geek.name == this.name && geek.id == this.id);
         }
+    //Các đối tượng như HashMap, HashTable sử dụng các đối tượng key để tìm kiếm các đối tượng value tương ứng.
+    // Và để tối ưu cho việc tìm kiếm, Java sử dụng các hash value lấy từ phương thức hashCode()
+    // của các đối tượng key để gom nhóm các đối tượng này trong những cái gọi là các bucket.
+    // Mỗi bucket tương ứng với một giá trị hash value.
+    //
+    //Khi tìm kiếm một đối tượng bất kỳ trong HashMap hay HashTable,
+    // đầu tiên Java sẽ lấy hash value của đối tượng key mà chúng ta muốn tìm kiếm.
+    // Sau đó nó sẽ kiểm tra các bucket để xem giá trị hash value đó có trùng khớp với bucket nào hay không.
+    // Nếu thoả mãn một bucket nào đó thì Java sẽ trả về giá trị của đối tượng value mà chúng ta muốn tìm kiếm.
+    //
+    //Nhiều đối tượng có thể có cùng hash value, và do đó chúng có thể nằm chung một bucket.
+    // Trong trường hợp này, Java sẽ sử dụng tiếp phương thức equals() để tìm chính xác đối tượng value
+    // mà chúng ta muốn tìm kiếm.
+    //
+    //Ở đây chúng ta có một khái niệm gọi là contract giữa phương thức equals() và phương thức hashCode() đó là:
+    //
+    //Nếu hai đối tượng là bằng nhau thì chúng phải có cùng hashCode().
+    //Nếu hai đối tượng có cùng hashCode() thì chúng có thể bằng nhau hoặc là không.
 
     @Override
     public int hashCode()
