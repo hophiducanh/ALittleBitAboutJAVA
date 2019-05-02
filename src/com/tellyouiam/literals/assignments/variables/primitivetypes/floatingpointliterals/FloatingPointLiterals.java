@@ -7,9 +7,9 @@ public class FloatingPointLiterals {
         //fraction. In the following example, the number 11301874.9881024 is the literal value:
         //double d = 11301874.9881024;
 
-        double d = 11301874.9881024;
+        double d = 11301874.9881024; //floating-point literals
 
-        //Floating-point literals are defined as double (64 bits) by default, so if you want to assign a floatingpoint literal
+        //Floating-point literals are defined as double (64 bits) by default, so if you want to assign a floating-point literal
         //to a variable of type float (32 bits), you must attach the suffix F or f to the number. If you
         //don’t do this, the compiler will complain about a possible loss of precision, because you’re trying to fit a
         //number into a (potentially) less precise “container.”
@@ -20,6 +20,8 @@ public class FloatingPointLiterals {
         // bit dấu, double độ chính xác 15 chữ số thập phân mà floating-point mặc định là double)
 
         float g = 498837849.029847F; //Ok; has the suffix "F"
+        float g1 = (float) 498837849.029847; //Ok, identical to preceding code
+        float g2 = 498837849.029847f; //Ok, identical to preceding code
 
         //You may also optionally attach a D or d to double literals, but it is not necessary because this is the
         //default behavior
