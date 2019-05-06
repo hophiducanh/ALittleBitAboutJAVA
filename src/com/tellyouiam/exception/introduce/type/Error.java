@@ -1,4 +1,4 @@
-package com.tellyouiam.exception.introduce;
+package com.tellyouiam.exception.introduce.type;
 
 public class Error {
     //Không giống exception, nhưng vấn đề xảy ra vượt quá tầm kiểm soát của lập trình viên hay người dùng.

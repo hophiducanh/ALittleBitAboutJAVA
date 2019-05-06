@@ -1,4 +1,4 @@
-package com.tellyouiam.exception.introduce;
+package com.tellyouiam.exception.introduce.type;
 
 public class UnCheckedException {
 
