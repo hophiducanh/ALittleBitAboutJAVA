@@ -34,6 +34,19 @@ public class CheckedExceptionPropagation {
         }
         catch (Exception e) {
             System.out.println("exception handled");
+
+            //We discussed that a call stack builds upward with the most recently called method at the top. You will
+            //notice that the printStackTrace() method prints the most recently entered method first and continues
+            //down, printing the name of each method as it works its way down the call stack (this is called “unwinding
+            //the stack”) from the top
+
+            e.printStackTrace();
+
+            //  Output:
+            //  at com.tellyouiam.exception.exceptionpropagation.CheckedExceptionPropagation.m(CheckedExceptionPropagation.java:20)
+            //	at com.tellyouiam.exception.exceptionpropagation.CheckedExceptionPropagation.n(CheckedExceptionPropagation.java:26)
+            //	at com.tellyouiam.exception.exceptionpropagation.CheckedExceptionPropagation.p(CheckedExceptionPropagation.java:33)
+            //	at com.tellyouiam.exception.exceptionpropagation.CheckedExceptionPropagation.main(CheckedExceptionPropagation.java:44)
         }
     }
 
