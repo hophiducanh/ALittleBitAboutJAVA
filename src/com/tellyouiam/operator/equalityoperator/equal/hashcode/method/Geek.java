@@ -7,6 +7,18 @@ package com.tellyouiam.operator.equalityoperator.equal.hashcode.method;
  * 4. https://huongdanjava.com/vi/phuong-thuc-equals-va-phuong-thuc-hashcode-trong-java.html
  * 5. https://viblo.asia/p/how-and-when-override-equals-and-hashcode-1Je5EYvy5nL
  * */
+
+/**
+ * Trong JAVA, có 2 kiểu biến: biến tham trị và tham chiếu.
+ * Biến kiểu tham trị bao gồm các kiểu nguyên thủy của JAVA như: int, long, double…
+ * Biến kiểu tham chiếu bao gồm: String, array, kiểu đối tượng…
+ *
+ * Khi sử dụng biến kiểu tham trị, JAVA chỉ cho phép bạn sử dụng toán tử so sánh “==”.
+ * Khi sử dụng biến kiểu tham chiếu, JAVA cho phép sử dụng cả toán tử “==” và equals().
+ * Tuy nhiên, khi sử dụng toán tử “==”, bộ xử lý của JAVA sẽ so sánh xem 2 biến tham chiếu này
+ * có trỏ đến cùng một đối tượng hay không, còn nếu bạn sử dụng phương thức equals(),
+ * bộ xử lý JAVA sẽ so sánh giá trị của 2 biến tham chiếu đó.
+ * */
 public class Geek {
     public String name;
     public int id;

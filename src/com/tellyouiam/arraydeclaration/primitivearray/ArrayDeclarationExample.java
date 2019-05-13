@@ -1,4 +1,4 @@
-package com.tellyouiam.arraydeclaration;
+package com.tellyouiam.arraydeclaration.primitivearray;
 
 /**
  *  Arrays can hold either primitives or object references, but an array itself

@@ -1,4 +1,4 @@
-package com.tellyouiam.exception.exceptionpropagation;
+package com.tellyouiam.exception.exceptionpropagation.declaration;
 
 import java.io.IOException;
 

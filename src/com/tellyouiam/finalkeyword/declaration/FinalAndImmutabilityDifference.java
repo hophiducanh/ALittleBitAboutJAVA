@@ -18,6 +18,6 @@ public class FinalAndImmutabilityDifference {
 
         //Immutable
         String name = "John";
-        name = "Sam";
+        name = "Sam"; //Tạo ra biến mới
     }
 }

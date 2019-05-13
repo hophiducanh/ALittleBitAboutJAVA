@@ -1,4 +1,4 @@
-package com.tellyouiam.exception.exceptionpropagation;
+package com.tellyouiam.exception.exceptionpropagation.declaration;
 /**
  * Another name: Ducking exception or passing the buck. (OCA)
  *
@@ -12,8 +12,6 @@ package com.tellyouiam.exception.exceptionpropagation;
  *  a
  *  main()
  * */
-
-import java.io.IOException;
 
 /**
  *

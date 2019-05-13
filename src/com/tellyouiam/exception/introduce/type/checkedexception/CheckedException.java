@@ -1,4 +1,4 @@
-package com.tellyouiam.exception.introduce.type;
+package com.tellyouiam.exception.introduce.type.checkedexception;
 
 import java.io.File;
 import java.io.FileNotFoundException;
