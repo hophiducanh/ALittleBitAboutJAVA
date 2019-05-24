@@ -5,7 +5,7 @@ package com.tellyouiam.binding.staticbinding;
  * Binding of all the static, private and final methods is done at compile-time
  * */
 
-public class NewClass {
+public class StaticBinding {
 
     static class SuperClass {
         // Static method in base class which will be hidden in subclass
@@ -15,7 +15,7 @@ public class NewClass {
     }
 
     public static class SubClass extends SuperClass {
-        // This method hides display() in Base
+        // This method hides pr(int) in SubClass
         static void print() {
             System.out.println("Print in SubClass");
         }
