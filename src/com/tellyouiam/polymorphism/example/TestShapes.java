@@ -42,8 +42,9 @@ public class TestShapes {
 
         player.displayShape(); //Displaying Shape (Trường hợp này trong PlayerPiece không override lại phương thức
         // của GameShape, còn nếu override lại thì sẽ gọi version displayShape() của PlayerPiece)
-        shape.displayShape();
+        shape.displayShape(); //Gọi ra reference type
         mover.animate();
+
 
 
         /**
@@ -77,6 +78,5 @@ public class TestShapes {
 
     private static void doShape(GameShape shape) {
         shape.displayShape();
-
     }
 }
