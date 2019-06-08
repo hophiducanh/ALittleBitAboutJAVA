@@ -4,6 +4,9 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
+//Reference: https://www.geeksforgeeks.org/logging-in-java/
+
+
 /**
  * Log là một quá trình ghi lại những thông tin được thông báo,
  * lưu lại trong quá trình hoạt động của một ứng dụng ở một nơi tập trung.
