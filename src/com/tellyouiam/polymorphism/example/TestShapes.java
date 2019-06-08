@@ -46,7 +46,6 @@ public class TestShapes {
         mover.animate();
 
 
-
         /**
          * Remember that method invocations allowed by the compiler are based solely on the declared type of
          * the reference, regardless of the object type (OCA) - Cái này quyết định bởi complier, tức là phương thức
