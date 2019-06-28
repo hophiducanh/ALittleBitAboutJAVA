@@ -18,7 +18,7 @@ public class GFG {
         Geek g1 = new Geek("aa", 1);
         Geek g2 = new Geek("aa", 1);
 
-        // comparing above created Objects.
+        // comparing above created Objects. //override in Geek class
         if(g1.hashCode() == g2.hashCode()) //Cùng giá trị hashCode chưa chắc đã bằng nhau.
         {
 

@@ -5,6 +5,8 @@ public class Budgie {
         Budgie b1 = new Budgie();
         Budgie b2 = new Budgie();
         Budgie b3 = b1;
+        String a1 = new String();
+        String a2 = new String();
 
         String s1 = "Bob";
         String s2 = "Bob";
@@ -15,5 +17,7 @@ public class Budgie {
         System.out.println(b1.equals(b3)); //true
         System.out.println(s1.equals(s2)); //true
         System.out.println(s1.equals(s3)); //false
+
+        System.out.println("a1 compare a2 " + a1.equals(a2));
     }
 }
