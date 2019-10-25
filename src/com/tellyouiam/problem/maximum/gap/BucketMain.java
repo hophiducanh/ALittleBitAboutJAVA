@@ -75,7 +75,7 @@ public class BucketMain {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = {0, 1, 2, 3, 4, 1000, 1001};
+		int[] arr = {0, 1, 2, 3, 5, 9, 11, 20, 25, 30, 39, 100000, 10010000, 100000000, 100000001, 1000000000, 1000000001};
 		int x = maximumGap(arr);
 		System.out.println(x);
 	}

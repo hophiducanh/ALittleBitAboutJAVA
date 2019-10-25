@@ -11,9 +11,9 @@ public class AttributeAndMethodOfArray {
     public static void main(String[] args) {
         String x = "test";
         System.out.println(x.substring(1, 3)); //es because argument 1 is zero-based, argument 2 is one-based
-        //System.out.println(x.length);
+//        System.out.println(x.length);
 
-        System.out.println(x.length());
+        System.out.println(x.length()); //cuz String is class -> length is method
 
         String [] y = new String[3];
         //System.out.println(y.length());

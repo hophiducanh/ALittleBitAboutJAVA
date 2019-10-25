@@ -9,7 +9,15 @@ import java.util.List;
  * @author : Ho Anh
  * @since : 04/10/2019, Fri
  **/
-public class SeperateList {
+
+/**
+  <pre>{@code
+ *     List<String> asList = stringStream.collect(ArrayList::new, ArrayList::add,
+ *                                                ArrayList::addAll);
+ *}</pre>
+ */
+
+public class UsingAccumulatorAndCombiner {
 	public static void main(String[] args) {
 		List<Integer> list = Arrays.asList(10, -2, 23, 5, -11, 287, 5, -99);
 		List<Integer> x = new ArrayList<>(Collections.nCopies(50, 5));
