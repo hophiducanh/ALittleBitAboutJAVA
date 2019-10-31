@@ -1,1 +1,5 @@
 Avoid clone project then select option open with IDEA (or something else). It should be open IDEA first then select option Import Project.
+
+*********************************************************************
+
+Update: I need open project from existing source, mark src as source root and it's done well
