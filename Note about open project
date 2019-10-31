@@ -2,4 +2,5 @@ Avoid clone project then select option open with IDEA (or something else). It sh
 
 *********************************************************************
 
-Update: I need open project from existing source, mark src as source root and it's done well
+Update: I need open project from existing source, mark src as source root and it's done well.
+If you have project as *.zip file, you can choose build with flash builder: https://www.jetbrains.com/help/idea/import-project-from-flash-builder-page-1.html#step3
