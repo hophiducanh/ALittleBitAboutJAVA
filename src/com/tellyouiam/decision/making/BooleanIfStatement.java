@@ -4,7 +4,7 @@ package com.tellyouiam.decision.making;
  * @author : Ho Anh
  * @since : 20/08/2019, Tue
  **/
-public class IfStatement {
+public class BooleanIfStatement {
 	public static void main(String[] args) {
 		boolean test = true;
 		if(!test) {
