@@ -1,4 +1,4 @@
-package com.tellyouiam.collection.sort;
+package com.tellyouiam.collections.sort;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;

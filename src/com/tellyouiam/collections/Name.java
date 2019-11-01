@@ -1,4 +1,4 @@
-package com.tellyouiam.collection;
+package com.tellyouiam.collections;
 
 /**
  * @author : Ho Anh
