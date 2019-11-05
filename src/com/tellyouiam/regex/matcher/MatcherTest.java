@@ -1,4 +1,4 @@
-package com.tellyouiam.matcher;
+package com.tellyouiam.regex.matcher;
 
 import com.tellyouiam.java8inaction.comparator.Developer;
 
@@ -12,7 +12,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 /**
  * @author : Ho Anh
