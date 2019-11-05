@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class GetMethod {
+public class SingletonList {
     public static void main(String[] args) {
         List<Integer> list = Collections.singletonList(5);
         //list.add(5); //unsupported operation: immutable

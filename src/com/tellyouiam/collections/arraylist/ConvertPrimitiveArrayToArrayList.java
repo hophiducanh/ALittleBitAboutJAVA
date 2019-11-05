@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class ConvertArrayToArrayList {
+public class ConvertPrimitiveArrayToArrayList {
     public static void main(String[] args) {
         Integer[] arr = new Integer[5];
 
