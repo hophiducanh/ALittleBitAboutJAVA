@@ -1,17 +1,11 @@
 package com.tellyouiam.initializationblock.staticblock;
 
-/**
+/*
  * Instance initializers are a useful alternative to instance variable initializers whenever:
- *
  * initializer code must catch exceptions, or
- *
- * perform fancy calculations that can't be expressed with an instance variable initializer.
- *
- * or
- *
+ * perform fancy calculations that can't be expressed with an instance variable initializer or
  * Instance initializers are also useful in anonymous inner classes, which can't declare any constructors at all. (docs)
  * //Xem anonymous class
- *
  * */
 public class StaticBlock {
     private static final int widgets;
