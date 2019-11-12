@@ -17,3 +17,4 @@ public class StaticConstant {
 		System.out.println(initials.get("AEN"));
 	}
 }
+

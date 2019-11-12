@@ -30,5 +30,11 @@ public class CharacterLiteral {
         char m = '\"'; //A double quote
         char n = '\n'; //A new line
         char tab = '\t'; //A tab
+        
+        int min_radix = Character.MIN_RADIX;
+        System.out.println("MIN_RADIX: " + min_radix);
+    
+        int max_radix = Character.MAX_RADIX;
+        System.out.println("MAX_RADIX: " + max_radix);
     }
 }
