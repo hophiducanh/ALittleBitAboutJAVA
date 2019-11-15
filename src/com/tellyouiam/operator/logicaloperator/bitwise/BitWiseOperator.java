@@ -11,6 +11,9 @@ public class BitWiseOperator {
 
         //5: 0101, 4: 0100
         byte b3 = 5 ^ 4; //Binary XOR Operator copies the bit if it is set in one operand but not both.
+        
+        byte b4 = ~0;
+        System.out.println(b4);
 
         System.out.println(b1 + " " + b2 + " " + b3);
     }

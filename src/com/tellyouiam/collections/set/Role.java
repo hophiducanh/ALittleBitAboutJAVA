@@ -28,7 +28,7 @@ public class Role {
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj) { //Nếu mà equals method không được override thì so sánh 2 object sẽ trả về false. Tương tự áp dụng với contains() method. E.x: set.contains();
 		if (!(obj instanceof Role))
 			return false;
 		if (obj == this)
