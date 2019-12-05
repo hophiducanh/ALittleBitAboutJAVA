@@ -1,7 +1,5 @@
 package com.tellyouiam.file.io;
 
-import sun.misc.IOUtils;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

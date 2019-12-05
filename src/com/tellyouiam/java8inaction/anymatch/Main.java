@@ -1,5 +1,7 @@
 package com.tellyouiam.java8inaction.anymatch;
 
+import com.sun.istack.internal.Interned;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -9,15 +11,15 @@ import java.util.stream.Collectors;
  **/
 public class Main {
 	public static void main(String[] args) {
-		List<MergedTrainerHorse> mergedTrainerHorseList = new ArrayList<>();
-		mergedTrainerHorseList.add(new MergedTrainerHorse(1, "Anh"));
-		mergedTrainerHorseList.add(new MergedTrainerHorse(2, "Anh"));
-		mergedTrainerHorseList.add(new MergedTrainerHorse(3, "Lan"));
-		mergedTrainerHorseList.add(new MergedTrainerHorse(4, "Ha"));
-		mergedTrainerHorseList.add(new MergedTrainerHorse(5, "Ha"));
-		mergedTrainerHorseList.add(new MergedTrainerHorse(6, "Ho"));
+		List<MergedTrainerHorse> ls = new ArrayList<>();
+		ls.add(new MergedTrainerHorse(1, "Anh"));
+		ls.add(new MergedTrainerHorse(2, "Anh"));
+		ls.add(new MergedTrainerHorse(3, "Lan"));
+		ls.add(new MergedTrainerHorse(4, "Ha"));
+		ls.add(new MergedTrainerHorse(5, "Ha"));
+		ls.add(new MergedTrainerHorse(6, "Ho"));
 
-//		List<String> allNames = mergedTrainerHorseList.stream().map(MergedTrainerHorse::getName).collect(Collectors.toList());
+//		List<String> allNames = ls.stream().map(MergedTrainerHorse::getName).collect(Collectors.toList());
 //		System.out.println(Arrays.toString(new List[]{allNames}));
 //		Set<String> namesOfDuplicatedHorses = new HashSet<>();
 //		Set<Integer> idsOfHorsesIsLikelyTheSame = new HashSet<>();
@@ -28,13 +30,13 @@ public class Main {
 //			}
 //		}
 //		System.out.println(Arrays.toString(new Set[]{namesOfDuplicatedHorses}));
-//		Set<MergedTrainerHorse> duplicatedHorses = mergedTrainerHorseList.stream()
+//		Set<MergedTrainerHorse> duplicatedHorses = ls.stream()
 //			.filter(h -> namesOfDuplicatedHorses.stream().anyMatch(namesOfDuplicatedHorse -> namesOfDuplicatedHorse.equals(h.getName()))).collect(Collectors.toSet());
 //		for (MergedTrainerHorse mergedTrainerHorse : duplicatedHorses) {
 //			System.out.println(mergedTrainerHorse.toString());
 //		}
 
-		Map<Integer, String> allNamesAndIds = mergedTrainerHorseList.stream()
+		Map<Integer, String> allNamesAndIds = ls.stream()
 			.collect(Collectors
 				.toMap(MergedTrainerHorse::getId, MergedTrainerHorse::getName));
 		Map<String, List<Integer>> horseLikelyToTheSameList = new HashMap<String,List<Integer>>();
@@ -59,6 +61,11 @@ public class Main {
 
 		Map<Integer, Integer> idsOfSameNameHorse = horseHasSameName.values().stream().collect(Collectors.toMap(m -> m.get(0), m -> m.get(1)));
 
-		idsOfSameNameHorse.forEach((key, value) -> System.out.println("Key : " + key + " Value : " + value));
+		//idsOfSameNameHorse.forEach((key, value) -> System.out.println("Key : " + key + " Value : " + value));
+		
+		boolean isExist = ls.stream().anyMatch( t -> t.getName().equalsIgnoreCase("Anh"));
+		if (isExist)
+			System.out.println("Exist");
+		
 	}
 }

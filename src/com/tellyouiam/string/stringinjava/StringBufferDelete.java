@@ -1,4 +1,4 @@
-package com.tellyouiam.stringinjava;
+package com.tellyouiam.string.stringinjava;
 
 public class StringBufferDelete {
     public static void main(String[] args) {

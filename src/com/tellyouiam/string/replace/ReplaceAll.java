@@ -1,5 +1,6 @@
 package com.tellyouiam.string.replace;
 
+import java.util.Scanner;
 import java.util.stream.Stream;
 
 /**
@@ -35,5 +36,19 @@ public class ReplaceAll {
 		String exMail = mail.substring(0, mail.length() - 1);
 		System.out.println(mail.length());
 		System.out.println("Email: "+ exMail);
+		
+		String test = "lala haha ";
+		System.out.println("Trim: " + test.trim());
+		System.out.println(test.trim().replaceAll("\\s", "%"));
+		
+		System.out.println("\u00a0");
+		String t1 = "la la";
+//		if (t1.replace("\u00a0", " ").trim().equals("la la")) {
+//			System.out.println("Haha");
+//		}
+		if (t1.replaceAll("(\\s)|(\\u00a0)", " ").trim().equals("la la")) {
+			System.out.println("Haha");
+		}
+		
 	}
 }

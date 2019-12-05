@@ -88,7 +88,7 @@ public class FormatCSV {
 
 		String one = "Düsseldorf - Zentrum - Günnewig Uebachs";
 		String last = one.substring(one.lastIndexOf('-') + 1);
-//		System.out.println(last);
+		System.out.println("last: " + last);
 
 		String addre = "64 Melaleuca Drive PALM BEACH QLD 4221";
 		String[] splitAddresses = addre.trim().split(" ");

@@ -1,4 +1,4 @@
-package com.tellyouiam.stringinjava;
+package com.tellyouiam.string.stringinjava;
 
 /**
  * Many of the exam questions covering this chapter’s topics use a tricky bit of Java syntax

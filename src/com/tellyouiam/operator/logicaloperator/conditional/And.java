@@ -7,5 +7,9 @@ public class And {
 		if (false && true || true) {
 			System.out.println();
 		}
+		
+		//if (null && true) { can't applied null value for logical operator
+		
+	//	}
 	}
 }

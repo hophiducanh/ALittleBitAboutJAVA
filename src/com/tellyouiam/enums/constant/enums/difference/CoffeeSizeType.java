@@ -1,4 +1,7 @@
 package com.tellyouiam.enums.constant.enums.difference;
+
+import com.tellyouiam.enums.constant.enums.difference.enumeratelist.PlayerType;
+
 /**
  *  The most important thing to remember is that enums are
  * not Strings or ints! Each of the enumerated CoffeeSize values is actually an instance of CoffeeSize.
@@ -17,6 +20,7 @@ public class CoffeeSizeType {
     private CoffeeSizeType(String enumName, int index) {}
 
     public static void main(String[] args) {
-        System.out.println(CoffeeSizeType.BIG);
+//        System.out.println(CoffeeSizeType.BIG);
+        System.out.println(PlayerType.WARRIOR.name());
     }
 }
