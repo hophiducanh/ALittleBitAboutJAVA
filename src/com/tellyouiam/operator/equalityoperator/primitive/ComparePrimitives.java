@@ -33,6 +33,14 @@ public class ComparePrimitives {
         //follows:
 
         if (x == 0) {}
-
+        
+        Integer xval = 1;
+        if (xval.equals(null)) {
+            System.out.println("Haha");
+        }
+        int y = 1;
+        if (xval == y) {
+            System.out.println("CCCCCCCCCCCCCCCCCCCCCCCCC");
+        }
     }
 }

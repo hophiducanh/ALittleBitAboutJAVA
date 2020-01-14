@@ -63,5 +63,6 @@ public class GetValuesListEnum {
 		System.out.println(type != null ? type.getName() : "");
 //		HorseReportType code = HorseReportType.valueOf("Post race report");
 		System.out.println(HorseReportType.TEXT_UPDATE.ordinal());
+		System.out.println(HorseReportType.TEXT_UPDATE.name());
 	}
 }

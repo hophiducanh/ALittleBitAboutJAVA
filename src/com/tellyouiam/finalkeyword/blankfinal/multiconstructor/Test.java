@@ -4,7 +4,7 @@ package com.tellyouiam.finalkeyword.blankfinal.multiconstructor;
 public class Test {
     //Nếu dùng static thì phải khởi tạo nó vì static là biến thuộc lớp, initialized mỗi khi class initialized
     final public int i;
-
+    
     //Không được gọi
     private Test(short val1) {
         this.i = val1;

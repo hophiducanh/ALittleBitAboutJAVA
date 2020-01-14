@@ -1,10 +1,11 @@
 package com.tellyouiam.file.io;
 
+import javax.swing.filechooser.FileSystemView;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
+import java.util.Arrays;
 
 public class DifferenceKindOfFilePath {
 	public static void main(String[] args) throws IOException { //https://unix.stackexchange.com/questions/249039/what-means-the-dots-on-a-path
@@ -14,8 +15,8 @@ public class DifferenceKindOfFilePath {
 		String text = "Hello world";
 		BufferedWriter output = null;
 		try {
-			file2 = new File("\\Desktop\\a.txt"); // >> diff result
-			output = new BufferedWriter(new FileWriter(file));
+			file2 = new File("C:\\Users\\.\\conta\\Desktop\\a.txt"); //if use relative path with \\.\\ possible don't work.
+			output = new BufferedWriter(new FileWriter(file2));
 			output.write(text);
 		} catch ( IOException e ) {
 			e.printStackTrace();
@@ -25,14 +26,30 @@ public class DifferenceKindOfFilePath {
 			}
 		}
 		try {
-			String canonical_path_string = file2.getCanonicalPath();
-			String absolute_path_string = file2.getAbsolutePath();
-			String path_string = file2.getPath();
+			String canonical_path_string = file.getCanonicalPath();
+			String absolute_path_string = file.getAbsolutePath();
+			String path_string = file.getPath();
+			
+			File directory = new File(".\\");
+			System.out.println(directory.getAbsolutePath());
 			
 			System.out.println("Canonical Path: " + canonical_path_string);//Canonical Path: C:\conta\opening_balance_test
 			System.out.println("Absolute Path: " + absolute_path_string);  //Absolute Path: C:\conta\.\.\opening_balance_test
 			System.out.println("Path: " + path_string);                     //Path: \conta\.\.\opening_balance_test
 			
+			String file3 = new File("", "prism_media").getAbsolutePath();
+			System.out.println("file3: " + file3);
+			
+			String file4 = new File("").getAbsolutePath();
+			System.out.println("file4: " + file4);
+			System.out.println(System.getenv("SystemDrive"));
+			//System.out.println(Arrays.toString(FileSystemView.getFileSystemView().getRoots()));
+			
+			File file5 = new File("", "hello.txt"); //access denied: On recent versions of Windows, you cannot write to the root folder of the system drive without elevated privileges.
+//			file5.createNewFile();
+			
+			File file6 = new File("C:\\Users\\conta\\Desktop\\b.txt");
+			file6.createNewFile();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
