@@ -4,7 +4,9 @@ package com.tellyouiam.collection;
  * @author : Ho Anh
  * @since : 23/09/2019, Mon
  **/
-public class Name {
+public class
+	
+		Name {
 	private Integer id;
 	private String name;
 
