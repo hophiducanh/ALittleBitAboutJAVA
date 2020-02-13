@@ -21,7 +21,7 @@ public class Horse {
 		this.avatar = avatar;
 		this.archive = archive;
 	}
-
+ 
 	public Integer getId() {
 		return id;
 	}
