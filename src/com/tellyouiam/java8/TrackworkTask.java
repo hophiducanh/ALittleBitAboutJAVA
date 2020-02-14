@@ -1,4 +1,4 @@
-package com.tellyouiam.java8inaction;
+package com.tellyouiam.java8;
 
 import java.util.Date;
 

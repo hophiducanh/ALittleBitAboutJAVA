@@ -1,6 +1,4 @@
-package com.tellyouiam.java8inaction.anymatch;
-
-import com.sun.istack.internal.Interned;
+package com.tellyouiam.java8.anymatch;
 
 import java.util.*;
 import java.util.stream.Collectors;

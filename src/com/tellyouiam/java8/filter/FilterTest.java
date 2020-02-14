@@ -1,4 +1,4 @@
-package com.tellyouiam.java8inaction.filter;
+package com.tellyouiam.java8.filter;
 
 import java.util.ArrayList;
 import java.util.List;

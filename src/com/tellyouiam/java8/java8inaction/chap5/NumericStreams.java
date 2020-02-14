@@ -1,4 +1,4 @@
-package com.tellyouiam.java8inaction.chap5;
+package com.tellyouiam.java8.java8inaction.chap5;
 
 import java.util.*;
 import java.util.stream.Collectors;

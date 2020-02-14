@@ -1,6 +1,6 @@
 package com.tellyouiam.collections.map;
 
-import com.tellyouiam.java8inaction.anymatch.MergedTrainerHorse;
+import com.tellyouiam.java8.anymatch.MergedTrainerHorse;
 
 import java.util.Arrays;
 import java.util.HashMap;

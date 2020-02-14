@@ -1,6 +1,4 @@
-package com.tellyouiam.java8inaction.anymatch;
-
-import java.util.Date;
+package com.tellyouiam.java8.anymatch;
 
 /**
  * @author : Ho Anh

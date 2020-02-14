@@ -1,4 +1,4 @@
-package com.tellyouiam.java8inaction.statement;
+package com.tellyouiam.java8.statement;
 
 public class User {
 	private int id;
