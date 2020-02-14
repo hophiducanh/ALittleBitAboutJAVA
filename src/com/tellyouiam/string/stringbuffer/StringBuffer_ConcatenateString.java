@@ -1,4 +1,4 @@
-package com.tellyouiam.string.stringinjava;
+package com.tellyouiam.string.stringbuffer;
 
 public class StringBuffer_ConcatenateString {
 

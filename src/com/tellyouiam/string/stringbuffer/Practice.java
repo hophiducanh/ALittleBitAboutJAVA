@@ -1,4 +1,4 @@
-package com.tellyouiam.string.stringinjava;
+package com.tellyouiam.string.stringbuffer;
 
 public class Practice {
     //Đây không phải là một chuỗi mà thực chất chỉ là một chuỗi ký tự

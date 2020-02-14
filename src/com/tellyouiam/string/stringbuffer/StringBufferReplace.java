@@ -1,4 +1,4 @@
-package com.tellyouiam.string.stringinjava;
+package com.tellyouiam.string.stringbuffer;
 
 public class StringBufferReplace {
     public static void main(String[] args) {

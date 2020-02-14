@@ -1,4 +1,4 @@
-package com.tellyouiam.string.stringinjava;
+package com.tellyouiam.string.stringbuffer;
 
 /**
  * String là Immutable không thay đổi được, nhưng java hỗ trợ StringBuilder và StringBuffer để thay đổi mà không
