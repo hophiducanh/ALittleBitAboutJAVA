@@ -1,4 +1,4 @@
-package com.tellyouiam.variableargument;
+package com.tellyouiam.variable.argument;
 
 public class VarargExample {
     static void display(String... values) {

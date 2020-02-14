@@ -1,6 +1,6 @@
 package com.tellyouiam.objecttype.referencetype.detail;
 
-public class Test {
+public class Main {
     public static void main(String[] args) {
         Animal a = new Horse();
         //Object type is the type of object we create actually

@@ -1,6 +1,8 @@
 package com.tellyouiam.binding.dynamicbinding;
 
 //See more in package polymorphism
+//https://hoclaptrinh.vn/tutorial/hoc-java/gan-ket-tinh-va-gan-ket-dong-dynamic-binding-trong-java
+//Khi kiểu của đối tượng được quyết định tại runtime thì đó là gắn kết động (Dynamic Binding).
 public class DynamicBinding {
     static class SuperClass
     {
@@ -25,7 +27,7 @@ public class DynamicBinding {
      * actual object (rather than the reference type) are instance methods. Not static methods. Not variables. Only overridden
      * instance methods are dynamically invoked based on the real OBJECT’s type.
      * */
-
+    // Reference type la superclass va object type la subclass
     public static void main(String[] args)
     {
         SuperClass A = new SuperClass();

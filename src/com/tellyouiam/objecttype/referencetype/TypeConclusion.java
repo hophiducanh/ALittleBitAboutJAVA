@@ -5,6 +5,6 @@ package com.tellyouiam.objecttype.referencetype;
  *
  * So the "reference type" would be Object and the "object type" would be Integer.
  * */
-public class Test {
+public class TypeConclusion {
     Object o = new Integer(3);
 }

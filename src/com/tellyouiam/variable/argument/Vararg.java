@@ -1,4 +1,4 @@
-package com.tellyouiam.variableargument;
+package com.tellyouiam.variable.argument;
 
 import com.tellyouiam.javareflection.o7planning.model.Animal;
 

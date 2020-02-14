@@ -19,7 +19,7 @@ public class SortTesting {
 		}
 
 		//sort by age
-		Collections.sort(listSalaryDevs, new Comparator<Developer>() {
+		listSalaryDevs.sort(new Comparator<Developer>() {
 			@Override
 			public int compare(Developer o1, Developer o2) {
 				return o1.getAge() - o2.getAge();
