@@ -1,6 +1,6 @@
 package com.tellyouiam.regex.matcher;
 
-import com.tellyouiam.java8inaction.comparator.Developer;
+import com.tellyouiam.java8.comparator.Developer;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
