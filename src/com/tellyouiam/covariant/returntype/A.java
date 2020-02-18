@@ -5,4 +5,7 @@ package com.tellyouiam.covariant.returntype;
  * @since : 18/02/2020, Tue
  **/
 public class A {
+	A get() {
+		return this;
+	}
 }
