@@ -4,5 +4,5 @@ package com.tellyouiam.covariant.returntype;
  * @author : Ho Anh
  * @since : 18/02/2020, Tue
  **/
-public class A {
+public class B1 {
 }
