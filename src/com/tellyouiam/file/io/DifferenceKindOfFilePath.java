@@ -1,11 +1,9 @@
 package com.tellyouiam.file.io;
 
-import javax.swing.filechooser.FileSystemView;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class DifferenceKindOfFilePath {
 	public static void main(String[] args) throws IOException { //https://unix.stackexchange.com/questions/249039/what-means-the-dots-on-a-path

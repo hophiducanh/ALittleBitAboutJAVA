@@ -1,8 +1,5 @@
 package com.tellyouiam.operator.equalityoperator.primitive.decimal;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.text.DecimalFormat;
 
 public class DecimalFormatTest {

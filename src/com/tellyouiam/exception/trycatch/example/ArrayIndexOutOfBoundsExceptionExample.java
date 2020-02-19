@@ -1,6 +1,5 @@
 package com.tellyouiam.exception.trycatch.example;
 
-import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 

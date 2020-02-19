@@ -1,6 +1,9 @@
 package com.tellyouiam.collections.iterator;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 public class NextMethod {
 	public static void main(String[] args) {

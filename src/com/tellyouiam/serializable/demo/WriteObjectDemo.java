@@ -1,6 +1,10 @@
 package com.tellyouiam.serializable.demo;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class WriteObjectDemo {
     public static void main(String[] args) throws FileNotFoundException, IOException {

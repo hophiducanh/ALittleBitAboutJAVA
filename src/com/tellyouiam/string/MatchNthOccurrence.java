@@ -1,7 +1,5 @@
 package com.tellyouiam.string;
 
-import java.util.Arrays;
-
 public class MatchNthOccurrence {
 	private static int ordinalIndexOf(String str, String substr, int n) {
 		int pos = -1;

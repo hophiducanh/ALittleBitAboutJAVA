@@ -1,6 +1,5 @@
 package com.tellyouiam.string.replace;
 
-import java.util.Scanner;
 import java.util.stream.Stream;
 
 /**

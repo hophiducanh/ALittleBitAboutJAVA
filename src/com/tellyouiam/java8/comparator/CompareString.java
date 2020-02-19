@@ -1,7 +1,6 @@
 package com.tellyouiam.java8inaction.comparator;
 
 import java.text.Collator;
-import java.util.Comparator;
 import java.util.Locale;
 
 /**

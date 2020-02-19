@@ -1,6 +1,6 @@
 package com.tellyouiam.docs.nameconvention;
 
-import static java.lang.System.*;
+import static java.lang.System.out;
 
 //Đặt tên class _ từ java9 fail
 public class _ {
