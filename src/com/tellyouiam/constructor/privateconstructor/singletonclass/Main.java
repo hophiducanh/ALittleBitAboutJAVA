@@ -7,5 +7,8 @@ public class Main {
         a.x = a.x + 10;
         System.out.println("Value of a.x = " + a.x);
         System.out.println("Value of a.x = " + b.x);
+        
+        // If private constructor used, you can't initialize MySingleton instant .
+        //MySingleton singleton = new MySingleton();
     }
 }

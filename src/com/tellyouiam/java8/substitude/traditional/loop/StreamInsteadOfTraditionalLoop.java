@@ -96,6 +96,8 @@ public class StreamInsteadOfTraditionalLoop {
 		String[] names = {"Sam", "Pamela", "Dave", "Pascal", "Erik"};
 
 		List<String> nameList =
+				//IntStream.range is equivalent to:
+				//for (int i = startInclusive; i < endExclusive ; i++)
 			IntStream.range(0, names.length)
 				.filter(i -> names[i].length() <= i)
 				.mapToObj(i -> names[i])
