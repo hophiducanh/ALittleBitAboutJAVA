@@ -2,6 +2,7 @@ package com.tellyouiam.string;
 
 public class StringIntern {
 	public static void main(String[] args) { //https://stackoverflow.com/questions/10578984/what-is-java-string-interning?noredirect=1&lq=1
+		//When you use a string literal the string can be interned, but when you use new String("...") you get a new string object.
 		String s1 = "Rakesh";
 		String s2 = "Rakesh";
 		String s3 = "Rakesh".intern();
