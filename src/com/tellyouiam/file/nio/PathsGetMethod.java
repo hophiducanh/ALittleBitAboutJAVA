@@ -1,4 +1,4 @@
-package com.tellyouiam.file.io.nio;
+package com.tellyouiam.file.nio;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
