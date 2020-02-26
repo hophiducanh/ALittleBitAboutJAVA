@@ -15,20 +15,32 @@ public class FindMethod {
 		String regex = "Geeks";
 		
 		// Create a pattern from regex
-		Pattern pattern
-				= Pattern.compile(regex);
+		Pattern pattern = Pattern.compile(regex);
 		
 		// Get the String to be matched
-		String stringToBeMatched
-				= "Geeks";
+		String stringToBeMatched = "Geeks";
 		
 		// Create a matcher for the input String
-		Matcher matcher
-				= pattern
-				.matcher(stringToBeMatched);
+		Matcher matcher = pattern.matcher(stringToBeMatched);
 		
 		// Get the subsequence
 		// using find() method
 		System.out.println(matcher.find());
+		
+		Matcher m = Pattern.compile("Hello").matcher("HelloHiHahaHello");
+		//Matcher m1 = Pattern.compile("Hello").matcher("HelloHiHaha");
+		if (m.find()) {
+			System.out.println("Matcher matched!");
+		}
+		
+		System.out.println(m.toMatchResult());
+		
+		int count = 0;
+		// With m1, matcher m.find() return false because matcher has not been reset. (don't have another hello to match)
+		// With m: it's work!
+ 		while (m.find()) {
+			count++;
+			System.out.println("Matcher matched again!: " + count);
+		}
 	}
 }
