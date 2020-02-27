@@ -1,4 +1,4 @@
-package com.tellyouiam.datetime;
+package com.tellyouiam.datetime.practice;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
  **/
 public class DIffTwoDates {
 	public static void main(String[] args) {
-		TimeUnit.DAYS.convert(600851475143L, TimeUnit.MILLISECONDS);
+		//Convert milliseconds to days.
+		System.out.println(TimeUnit.DAYS.convert(600851475143L, TimeUnit.MILLISECONDS));
 	}
 }

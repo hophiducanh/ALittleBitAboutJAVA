@@ -1,4 +1,4 @@
-package com.tellyouiam.datetime;
+package com.tellyouiam.datetime.practice;
 
 import java.time.Instant;
 import java.util.Date;
