@@ -1,4 +1,4 @@
-package com.tellyouiam.loops;
+package com.tellyouiam.loops.continuestatement;
 
 public class Continue {
     public static void main(String[] args) {
