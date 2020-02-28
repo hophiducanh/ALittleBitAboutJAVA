@@ -9,7 +9,7 @@ import java.io.IOException;
 //https://www.javatpoint.com/pdfbox-extracting-phone-number
 public class PdfBoxExample {
 	public static void main(String[] args) throws IOException {
-		File file = new File("C:\\Users\\conta\\OneDrive\\Desktop\\data\\POB-467-Swettenham Stud\\Data to import\\ownership.pdf");
+		File file = new File("C:\\Users\\conta\\OneDrive\\Desktop\\data\\POB-467-Swettenham Stud\\Data to import\\master-data\\Horse Categories.pdf"); //image can't read.
 		PDDocument doc = PDDocument.load(file);
 		
 		PDFTextStripper pdfTextStripper = new PDFTextStripper();
