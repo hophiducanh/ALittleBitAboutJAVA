@@ -12,8 +12,9 @@ public class ZoneOffsetClass {
 		LocalDateTime now = LocalDateTime.now();
 		System.out.println(now);
 		ZoneId zone = ZoneId.of("Europe/Berlin");
+		System.out.println("ZoneId: " + zone);
 		ZoneOffset zoneOffSet = zone.getRules().getOffset(now);
-		System.out.println(zoneOffSet);
+		System.out.println("ZoneOffset: " + zoneOffSet);
 		
 		ZoneId z = ZoneOffset.systemDefault();
 		System.out.println(z);
@@ -21,5 +22,8 @@ public class ZoneOffsetClass {
 		System.out.println(x/3600);
 
 		System.out.println(OffsetDateTime.now().getOffset().get(ChronoField.OFFSET_SECONDS));
+
+		System.out.println(ZoneId.of("+3"));
+		System.out.println(ZoneId.of("Z"));
 	}
 }
