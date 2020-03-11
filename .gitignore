@@ -1,3 +1,3 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea/*
-!/src/com/tellyouiam/git/GitUnstagedCommit.java
+/src/com/tellyouiam/git/GitUnstagedCommit.java
