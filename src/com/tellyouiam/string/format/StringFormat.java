@@ -26,5 +26,9 @@ public class StringFormat {
 		boolean a = true;
 		boolean b = false;
 		Boolean c = null;
+
+		String query = "a";
+		String formatter = String.format("%%%s%%", query);
+		System.out.println(formatter);
 	}
 }
