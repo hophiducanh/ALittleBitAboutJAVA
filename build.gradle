@@ -1,44 +1,44 @@
-task hello {
-	doLast {
-		println 'Hello world!'
-	}
-}
-
-task upper {
-	doLast {
-		//difference between single quote and double quote
-		//single quote only for string
-		String someString = 'mY_namE';
-		println "Original: $someString"
-		println "Upper case: ${someString.toUpperCase()}"
-	}
-}
-
-task count {
-	doLast {
-		4.times { print "$it " }
-	}
-}
-
-task intro {
-	dependsOn hello
-	doLast {
-		println "I'm gradle"
-	}
-}
-
-4.times {
-	counter ->
-		task "task$counter" {
-			doLast {
-				println "I'm task number$counter"
-			}
-		}
-}
-task0.dependsOn task2, task3
-
-
-apply plugin: 'java' //Gradle's legacy
+//task hello {
+//	doLast {
+//		println 'Hello world!'
+//	}
+//}
+//
+//task upper {
+//	doLast {
+//		//difference between single quote and double quote
+//		//single quote only for string
+//		String someString = 'mY_namE';
+//		println "Original: $someString"
+//		println "Upper case: ${someString.toUpperCase()}"
+//	}
+//}
+//
+//task count {
+//	doLast {
+//		4.times { print "$it " }
+//	}
+//}
+//
+//task intro {
+//	dependsOn hello
+//	doLast {
+//		println "I'm gradle"
+//	}
+//}
+//
+//4.times {
+//	counter ->
+//		task "task$counter" {
+//			doLast {
+//				println "I'm task number$counter"
+//			}
+//		}
+//}
+//task0.dependsOn task2, task3
+//
+//
+//apply plugin: 'java' //Gradle's legacy
 
 buildscript {
     //https://stackoverflow.com/questions/48610901/only-build-script-and-other-plugins-script-blocks-are-allowed-before-plugins
@@ -65,6 +65,25 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-generator-annprocess
 	testCompile group: 'org.openjdk.jmh', name: 'jmh-generator-annprocess', version: '1.21'
+
+	// https://mvnrepository.com/artifact/org.projectlombok/lombok
+	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+}
+
+
+
+sourceSets {
+	main {
+		java {
+			srcDirs = ['src']
+		}
+	}
+
+	test {
+		java {
+			srcDirs = ['test']
+		}
+	}
 }
 
 test {

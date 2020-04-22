@@ -7,10 +7,10 @@ import java.time.format.DateTimeFormatter;
 public class Demo {
     public static void main(String[] args) {
         DateTimeFormatter f = DateTimeFormatter.ofPattern("MMddyyyy");
-        LocalDate bday = null;
+        LocalDate bday = LocalDate.now();
 
         try {
-            bday = LocalDate.parse(args[0], f);
+            //bday = LocalDate.parse(args[0], f); gradle build cannot recognize
         } catch (java.time.DateTimeException e) {
             System.out.println("bad dates Indy");
             System.exit(0);

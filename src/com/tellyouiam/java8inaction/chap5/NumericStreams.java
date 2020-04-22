@@ -1,4 +1,4 @@
-package com.tellyouiam.java8.java8inaction.chap5;
+package com.tellyouiam.java8inaction.chap5;
 
 import java.util.Arrays;
 import java.util.HashSet;
