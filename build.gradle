@@ -68,6 +68,16 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/org.projectlombok/lombok
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+
+	// https://mvnrepository.com/artifact/com.opencsv/opencsv
+	compile group: 'com.opencsv', name: 'opencsv', version: '4.6'
+
+	// https://mvnrepository.com/artifact/commons-codec/commons-codec
+	compile group: 'commons-codec', name: 'commons-codec', version: '1.14'
+
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	compile group: 'com.google.guava', name: 'guava', version: '23.0'
+
 }
 
 
