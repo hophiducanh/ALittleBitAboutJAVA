@@ -1,5 +1,6 @@
 package com.tellyouiam.regex.java8;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -28,5 +29,14 @@ public class SplitString {
 			countX++;
 		}
 		System.out.println(countX); //countX = count - 1;
+		
+		String input = "Azurite (IRE) ( Azamour (IRE) - High Lite (GB)) 9yo Bay Gelding     Michael Hickmott " +
+				"Bloodstock - In training Michael Hickmott Bloodstock 1/08/2019";
+		
+		List<String> strs = Pattern.compile("([^,].+)").splitAsStream(input).collect(Collectors.toList());
+		strs.forEach(System.out::println);
+		String[] ss = "Hello World(1)".split(Pattern.quote("("));
+		String[] ss1 = "Hello World(1)".split("\\(");
+		
 	}
 }
