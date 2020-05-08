@@ -17,38 +17,7 @@ public class FormatSwaggerAPITool {
 //            }
 //        }
 
-        String input = "/**\n" +
-                "     * @api {GET} /reminder/affirmation\n" +
-                "     * @apiName GET List Reminder Affirmation.\n" +
-                "     * @apiHeader\n" +
-                "     * @apiHeaderExample\n" +
-                "     * @apiParam {Integer} pageIndex\n" +
-                "     * @apiParam {Integer} pageSize\n" +
-                "     * @apiSuccessExample {json} Success-Response: HTTP/1.1 200 OK\n" +
-                "     * {\n" +
-                "     *     \"error\": null,\n" +
-                "     *     \"responseData\": [\n" +
-                "     *         {\n" +
-                "     *             \"id\": 2,\n" +
-                "     *             \"affirmation\": \"I will try my best\",\n" +
-                "     *             \"reminderTemplateId\": 5\n" +
-                "     *         },\n" +
-                "     *         {\n" +
-                "     *             \"id\": 1,\n" +
-                "     *             \"affirmation\": \"The moment I witnessing, the future I'm coming.\",\n" +
-                "     *             \"reminderTemplateId\": 2\n" +
-                "     *         },\n" +
-                "     *         {\n" +
-                "     *             \"id\": 3,\n" +
-                "     *             \"affirmation\": \"The moment I witnessing, the future I'm coming.\",\n" +
-                "     *             \"reminderTemplateId\": 2\n" +
-                "     *         }\n" +
-                "     *     ],\n" +
-                "     *     \"extraData\": null,\n" +
-                "     *     \"successMessage\": null,\n" +
-                "     *     \"warningMessage\": null\n" +
-                "     * }\n" +
-                "     */";
+        String input = "";
         String result = input.toString().replaceAll("/\\*\\*\n", "");
         result = result.replaceAll("\\*/", "");
         result = result.replaceAll("(?m)^(\\s+)\\*\\s", "");
