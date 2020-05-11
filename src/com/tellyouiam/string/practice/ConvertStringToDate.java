@@ -12,14 +12,40 @@ import java.time.format.ResolverStyle;
 import java.time.format.SignStyle;
 import java.time.temporal.TemporalAccessor;
 import java.util.Date;
+import java.util.Locale;
+
+import static java.time.temporal.ChronoField.*;
 
 import static java.time.temporal.ChronoField.DAY_OF_MONTH;
 import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
 import static java.time.temporal.ChronoField.YEAR;
 
 public class ConvertStringToDate {
+
+	private static final DateTimeFormatter AUSTRALIA_FORMAL_DATE_FORMAT;
+	static {
+		AUSTRALIA_FORMAL_DATE_FORMAT = new DateTimeFormatterBuilder()
+				.appendValue(DAY_OF_MONTH, 2)
+				.appendLiteral(' ')
+				.appendValue(MONTH_OF_YEAR)
+				.appendLiteral(',')
+				.appendLiteral(' ')
+				.appendValue(YEAR, 4)
+				.toFormatter();
+	}
 	
 	public static void main(String[] args) throws ParseException {
+		//https://stackoverflow.com/questions/46305245/parsing-with-java-8-datetimeformatter-and-spanish-month-names
+		DateTimeFormatter fmt = new DateTimeFormatterBuilder()
+				// case insensitive
+				.parseCaseInsensitive()
+				// pattern with full month name (MMMM)
+				.appendPattern("MMMM yyyy")
+				// set locale
+				.toFormatter(new Locale("es", "ES"));
+		// now it works
+		fmt.parse("Mayo 2017");
+		
 		String str = "29/08/2019";
 		
 		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
@@ -61,7 +87,7 @@ public class ConvertStringToDate {
 				);
 		ParsePosition pos = new ParsePosition(0);
 		TemporalAccessor ta = dtf.parseUnresolved(input, pos); // step 1
-		LocalDate date = null;
+		LocalDate dateInput = null;
 		if (pos.getErrorIndex() == -1 && pos.getIndex() == input.length()) {
 			try {
 				//date = LocalDate.parse(input, dtf); // step 2
@@ -69,7 +95,14 @@ public class ConvertStringToDate {
 				dte.printStackTrace(); // in strict mode (see resolver style above)
 			}
 		}
-		System.out.println(date);
+		System.out.println(dateInput);
 		
+		String date = "28 April, 2020";
+		
+		
+		//parse case insensitive
+		LocalDate formattedDate = LocalDate.parse(date, DateTimeFormatter.ofPattern("dd MMMM, yyyy"));
+		//LocalDate formattedDate = LocalDate.parse(date, AUSTRALIA_FORMAL_DATE_FORMAT);
+		System.out.println(formattedDate);
 	}
 }

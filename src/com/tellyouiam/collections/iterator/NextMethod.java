@@ -23,5 +23,10 @@ public class NextMethod {
 		
 		List<Integer> list = Arrays.asList(1, 2);
 		System.out.println(list.iterator().next()); //1 >> GET THE FIRST ONE
+		
+		Iterable<Integer> i = Arrays.asList(1,1,1);
+		for (Integer ii : i ) {
+			ii.byteValue();
+		}
 	}
 }
