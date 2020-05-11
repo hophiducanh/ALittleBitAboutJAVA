@@ -1,4 +1,4 @@
-package com.tellyouiam.string.practice;
+package com.tellyouiam.datetime.java8.practice;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
