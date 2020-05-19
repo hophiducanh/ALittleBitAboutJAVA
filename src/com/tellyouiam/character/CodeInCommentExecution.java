@@ -1,7 +1,5 @@
 package com.tellyouiam.character;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 public class CodeInCommentExecution {
 	//TODO
 	//https://stackoverflow.com/questions/30727515/why-is-executing-java-code-in-comments-with-certain-unicode-characters-allowed?rq=1
