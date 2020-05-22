@@ -1,8 +1,13 @@
 package com.tellyouiam.clazz;
 
 public class ForNameMethod {
-	//What purpose does Class.forName() serve if you don't use the return value?
 	public static void main(String[] args) {
-	
+		try {
+			String str = Class.forName("java.lang.String").getName();
+			Class.forName("java.lang.String");
+			System.out.println(str);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 }
