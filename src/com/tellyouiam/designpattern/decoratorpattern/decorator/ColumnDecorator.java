@@ -1,7 +1,7 @@
 package com.tellyouiam.designpattern.decoratorpattern.decorator;
 
 public abstract class ColumnDecorator implements Report {
-	private Report decoratedReport;
+	private final Report decoratedReport;
 	
 	public ColumnDecorator(Report report) {
 		this.decoratedReport = report;

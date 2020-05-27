@@ -1,3 +1,4 @@
 https://howtodoinjava.com/design-patterns/structural/decorator-design-pattern/
 https://dzone.com/articles/decorator-design-pattern-in-java
 https://stackoverflow.com/questions/2707401/understand-the-decorator-pattern-with-a-real-world-example
+https://toihocdesignpattern.com/chuong-3-head-first-design-patterns-tieng-viet-decorator-pattern-doi-tuong-trang-tri.html

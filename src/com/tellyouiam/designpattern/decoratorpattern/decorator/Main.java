@@ -9,9 +9,7 @@ public class Main {
 		//														new ClientReport()));
 		//System.out.println(popupDecoratored.getFirstColumnData());
 		
-		SupportPopupDecorator supportPopupDecoratored = new SupportPopupDecorator
-				(new SupportLinkDecorator
-						(new SupportReport()));
+		SupportPopupDecorator supportPopupDecoratored = new SupportPopupDecorator(new SupportLinkDecorator(new SupportReport()));
 		System.out.println(supportPopupDecoratored.getFirstColumnData());
 	}
 }
