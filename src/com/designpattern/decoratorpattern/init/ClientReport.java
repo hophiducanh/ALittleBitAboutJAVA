@@ -1,6 +1,6 @@
-package com.tellyouiam.designpattern.decoratorpattern.init;
+package com.designpattern.decoratorpattern.init;
 
-public class SupportReport implements Report {
+public class ClientReport implements Report {
 	
 	@Override
 	public Object[][] getReportData(String reportId) {

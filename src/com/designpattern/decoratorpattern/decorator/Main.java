@@ -1,4 +1,4 @@
-package com.tellyouiam.designpattern.decoratorpattern.decorator;
+package com.designpattern.decoratorpattern.decorator;
 
 public class Main {
 	public static void main(String[] args)

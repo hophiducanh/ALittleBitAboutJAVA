@@ -1,4 +1,4 @@
-package com.tellyouiam.java8inaction.partioning;
+package com.tellyouiam.java8.partioning;
 
 import java.util.ArrayList;
 import java.util.Arrays;

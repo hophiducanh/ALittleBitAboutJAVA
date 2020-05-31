@@ -1,4 +1,4 @@
-package com.tellyouiam.designpattern.decoratorpattern.decorator;
+package com.designpattern.decoratorpattern.decorator;
 
 public abstract class ColumnDecorator implements Report {
 	private final Report decoratedReport;

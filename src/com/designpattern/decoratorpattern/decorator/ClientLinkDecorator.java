@@ -1,4 +1,4 @@
-package com.tellyouiam.designpattern.decoratorpattern.decorator;
+package com.designpattern.decoratorpattern.decorator;
 
 public class ClientLinkDecorator extends ColumnDecorator{
 	public ClientLinkDecorator(Report report) {

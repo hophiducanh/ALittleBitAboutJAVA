@@ -1,6 +1,6 @@
-package com.tellyouiam.designpattern.decoratorpattern.decorator;
+package com.designpattern.decoratorpattern.decorator;
 
-public class SupportReport implements Report{
+public class ClientReport implements Report {
 	@Override
 	public Object[][] getReportData(String reportId) {
 		return null;
@@ -8,6 +8,6 @@ public class SupportReport implements Report{
 	
 	@Override
 	public String getFirstColumnData() {
-		return "Support data";
+		return "Client data";
 	}
 }

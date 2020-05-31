@@ -1,4 +1,4 @@
-package com.tellyouiam.designpattern.decoratorpattern.init;
+package com.designpattern.decoratorpattern.init;
 
 public interface Report {
 	Object[][] getReportData(final String reportId);
