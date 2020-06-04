@@ -9,6 +9,14 @@ public class FindLargestElementArray {
 	static int checkBit(int pattern, Vector<Integer> arr, int n) {
 		int count = 0;
 		for (int i = 0; i < n; i++) {
+			
+			// Integer.MAX_VALUE: 1111111111111111111111111111111
+			// pattern usually is power of 2
+			// 2 > 10
+			// 4 > 100
+			// 8 > 1000
+			// 16 > 10000
+			// condition only satisfy if pattern < arr.get(i)
 			if ((pattern & arr.get(i)) == pattern) {
 				count++;
 			}
@@ -22,6 +30,9 @@ public class FindLargestElementArray {
 			v.add(a);
 		
 		// Insert INT_MAX and update n
+		// 2147483647 == 1111111111111111111111111111111
+		// even number >> binary end with 0
+		// odd number >> binary end with 1
 		v.add(Integer.MAX_VALUE);
 		n++;
 		
@@ -34,14 +45,18 @@ public class FindLargestElementArray {
 			// Find the count of element having set msb
 			// << Shifting this bit pattern to the left one position
 			// https://stackoverflow.com/questions/31238370/1-left-shift-by-31
+			// left shift double value, right shift halve value.
 			int count = checkBit(res | (1 << bit), v, n);
 			
 			// if count | 1 != 1 set particular
 			// bit in result
-			if ((count | 1) != 1)
-				//res = res | (1 << bit) (bitwise OR)
-				//https://stackoverflow.com/questions/14295469/what-does-mean-pipe-equal-operator
-				res |= (1 << bit);
+			if ((count | 1) != 1) { //if count != 1.
+				// res = res | (1 << bit) (bitwise OR)
+				// https://stackoverflow.com/questions/14295469/what-does-mean-pipe-equal-operator
+				// OR bitwise apply to (2^n) always return greater than original value.
+				res = res | (1 << bit) ;
+				System.out.println(res);
+			}
 		}
 		
 		return res;
