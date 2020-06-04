@@ -32,11 +32,15 @@ public class FindLargestElementArray {
 		for (int bit = 31; bit >= 0; bit--) {
 			
 			// Find the count of element having set msb
+			// << Shifting this bit pattern to the left one position
+			// https://stackoverflow.com/questions/31238370/1-left-shift-by-31
 			int count = checkBit(res | (1 << bit), v, n);
 			
 			// if count | 1 != 1 set particular
 			// bit in result
 			if ((count | 1) != 1)
+				//res = res | (1 << bit) (bitwise OR)
+				//https://stackoverflow.com/questions/14295469/what-does-mean-pipe-equal-operator
 				res |= (1 << bit);
 		}
 		
