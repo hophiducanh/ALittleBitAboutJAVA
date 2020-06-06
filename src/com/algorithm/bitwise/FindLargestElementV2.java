@@ -11,6 +11,29 @@ public class FindLargestElementV2 {
 		return seq.stream().filter(element -> (valueAtMSBIndex & element) == valueAtMSBIndex).count();
 	}
 	
+	static int isGt(int a, int b)
+	{
+		int diff = a ^ b;
+		diff |= diff >> 1;
+		diff |= diff >> 2;
+		diff |= diff >> 4;
+		diff |= diff >> 8;
+		diff |= diff >> 16;
+		
+		//1+ on GT, 0 otherwise.
+		diff &= ~(diff >> 1) | 0x80000000;
+		diff &= (a ^ 0x80000000) & (b ^ 0x7fffffff);
+		
+		//flatten back to range of 0 or 1.
+		diff |= diff >> 1;
+		diff |= diff >> 2;
+		diff |= diff >> 4;
+		diff |= diff >> 8;
+		diff |= diff >> 16;
+		diff &= 1;
+		
+		return diff;
+	}
 	public static void main(String[] args) {
 		
 		List<Integer> initialSeq = Stream.concat(Stream.of(1, 5, 9, 30, 15), Stream.of(Integer.MAX_VALUE))
@@ -24,5 +47,8 @@ public class FindLargestElementV2 {
 				max.set(bitCheck);
 			}
 		});
+		
+		System.out.println(isGt(6, 5));;
+		
 	}
 }
