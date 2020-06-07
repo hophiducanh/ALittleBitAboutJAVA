@@ -1,8 +1,5 @@
 package com.algorithm.bitwise;
 
-import java.util.Arrays;
-import java.util.List;
-
 public class MaxV3 {
 	
 	static int min(int x, int y) {
@@ -13,8 +10,9 @@ public class MaxV3 {
 //	static int max(int x, int y) {
 //		return x ^ ((x ^ y) & -(x << y));
 //	}
-	public static int max(int a, int b) {
+	public static int getLargerNumber(int a, int b) {
 		int c = a - b;
+		//get sign bit's value
 		int k = (c >> 31) & 0x1;
 		return a - k * c;
 	}
@@ -22,10 +20,10 @@ public class MaxV3 {
 	public static void main(String[] args) {
 		
 		//--------------------------------
-		List<Integer> seq = Arrays.asList(0, 3, 2, 6, 100, 5, 4);
+		int[] seq = new int[]{0, -3, -2, -6, 20, -5, -4};
 		int max = 0;
 		for (Integer i : seq) {
-			max = max(i, max);
+			max = getLargerNumber(i, max);
 		}
 		System.out.println(max);
 	}

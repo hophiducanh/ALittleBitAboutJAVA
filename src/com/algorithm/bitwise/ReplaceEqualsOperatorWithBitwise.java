@@ -1,5 +1,6 @@
 package com.algorithm.bitwise;
 
+//https://stackoverflow.com/questions/31678344/compare-two-integers-using-bit-operator
 public class ReplaceEqualsOperatorWithBitwise {
 	public static int isEqual(int x, int y) { return x ^ y;
 	}
