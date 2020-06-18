@@ -12,4 +12,7 @@ public class Child extends Base {
 		z = addition() -x;
 		System.out.println(z);
 	}
+	public int addition() {
+		return x + y + 100;
+	}
 }
