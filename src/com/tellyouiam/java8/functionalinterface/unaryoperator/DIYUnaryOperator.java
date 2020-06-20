@@ -1,4 +1,4 @@
-package com.tellyouiam.java8.functionalinterface;
+package com.tellyouiam.java8.functionalinterface.unaryoperator;
 
 import java.util.function.Function;
 import java.util.function.UnaryOperator;

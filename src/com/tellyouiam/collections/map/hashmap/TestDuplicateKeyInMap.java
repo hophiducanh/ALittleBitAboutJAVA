@@ -1,4 +1,4 @@
-package com.tellyouiam.collections.map;
+package com.tellyouiam.collections.map.hashmap;
 
 import com.tellyouiam.java8.anymatch.MergedTrainerHorse;
 
