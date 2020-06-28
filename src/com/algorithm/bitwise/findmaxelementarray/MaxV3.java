@@ -1,4 +1,4 @@
-package com.algorithm.bitwise;
+package com.algorithm.bitwise.findmaxelementarray;
 
 public class MaxV3 {
 	
