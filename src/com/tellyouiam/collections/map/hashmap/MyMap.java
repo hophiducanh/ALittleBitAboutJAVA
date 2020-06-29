@@ -1,7 +1,7 @@
 package com.tellyouiam.collections.map.hashmap;
 
 public class MyMap<K, V> {
-	private Entry<K, V>[] buckets;
+	private Entry[] buckets;
 	private int capacity; // 16
 	
 	private int size = 0;
