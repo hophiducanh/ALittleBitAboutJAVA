@@ -1,11 +1,14 @@
 package com.tellyouiam.datetime.java8.practice;
 
 import java.time.LocalDate;
+import java.time.YearMonth;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
 import java.time.format.SignStyle;
+import java.util.Date;
 
 import static java.time.temporal.ChronoField.DAY_OF_MONTH;
 import static java.time.temporal.ChronoField.MONTH_OF_YEAR;
@@ -50,5 +53,16 @@ public class CheckIfDMYFormat {
 	
 	public static void main(String[] args) {
 		System.out.println(isDMYFormat("30/02/2019")); //false
+		
+		Date toDate = new Date();
+		
+		LocalDate localDate = toDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+				.appendValue(YEAR, 4)
+				.appendLiteral('-')
+				.appendText(MONTH_OF_YEAR)
+				.toFormatter();
+		String exportYearMonth = localDate.format(formatter);
+		System.out.println(exportYearMonth);
 	}
 }
