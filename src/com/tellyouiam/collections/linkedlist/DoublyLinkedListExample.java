@@ -1,5 +1,6 @@
 package com.tellyouiam.collections.linkedlist;
 
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 //https://stackoverflow.com/questions/31365998/is-there-any-doubly-linked-list-implementation-in-java
@@ -10,5 +11,6 @@ public class DoublyLinkedListExample {
 		String pre = new LinkedList<String>().listIterator().previous();
 		String next = new LinkedList<String>().listIterator().next();
 		String specific = new LinkedList<String>().listIterator(1).next();
+		LinkedHashMap<Integer, String> map = new LinkedHashMap<>(16, .75f, true);
 	}
 }
