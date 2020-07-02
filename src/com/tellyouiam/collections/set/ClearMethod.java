@@ -9,6 +9,7 @@ public class ClearMethod {
 		Set<Integer> set = new HashSet<>(Arrays.asList(1,2,3));
 		set.forEach(System.out::println);
 		set.clear();
+		System.out.println("CLEAR********");
 		set.forEach(System.out::println);
 	}
 }

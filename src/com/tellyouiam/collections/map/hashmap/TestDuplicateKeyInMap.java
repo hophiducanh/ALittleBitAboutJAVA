@@ -35,6 +35,7 @@ public class TestDuplicateKeyInMap {
 
 		Map<String, Object> contactMap = new HashMap<>();
 		contactMap.put("A", new MergedTrainerHorse(1, "Horse"));
+		System.out.println(contactMap.put("A", new MergedTrainerHorse(1, "Horse")));
 		contactMap.put("B", new MergedTrainerHorse(2, "Mammal"));
 		contactMap.put("C", new MergedTrainerHorse(3, "Dinosaurs"));
 
