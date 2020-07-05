@@ -6,13 +6,13 @@ public class Test {
         a.eat();
 
         Horse h = new Horse();
-        h.eat();
+        //h.eat();
 
         Animal ah = new Horse();
         ah.eat(); //polymorphism
 
         Horse he = new Horse();
-        he.eat("Apples");
+        //he.eat("Apples");
 
         Animal a2 = new Animal();
         //a2.eat("treats");
