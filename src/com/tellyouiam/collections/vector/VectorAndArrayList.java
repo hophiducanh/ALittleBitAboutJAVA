@@ -17,7 +17,11 @@ public class VectorAndArrayList {
 		al.add("contribute.GeeksforGeeks.org");
 		
 		//traversing element using Iterator
+		//iterator support remove() method while enumeration don't.
 		Iterator<String> it = al.iterator();
+		it.forEachRemaining(System.out::println);
+		
+		System.out.println("******************************************");
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
