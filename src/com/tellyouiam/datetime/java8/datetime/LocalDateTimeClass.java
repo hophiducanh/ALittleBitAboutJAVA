@@ -1,4 +1,4 @@
-package com.tellyouiam.datetime.java8;
+package com.tellyouiam.datetime.java8.datetime;
 
 import java.time.Clock;
 import java.time.LocalDateTime;

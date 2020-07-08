@@ -7,6 +7,7 @@ import java.time.ZoneOffset;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
+//A time-zone offset from Greenwich/UTC
 public class ZoneOffsetClass {
 	public static void main(String[] args) {
 		LocalDateTime now = LocalDateTime.now();
