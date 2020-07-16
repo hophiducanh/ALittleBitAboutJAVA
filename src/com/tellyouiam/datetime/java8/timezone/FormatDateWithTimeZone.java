@@ -60,6 +60,5 @@ public class FormatDateWithTimeZone {
 		String format = DateTimeFormatter.ISO_INSTANT.format(instant);
 		String format1 = LocalDateTime.parse(format, ISO_OFFSET_DATE_TIME).format(ISO_LOCAL_DATE);
 		System.out.println("format = " + format);
-		System.out.println("format = " + format1);
 	}
 }
