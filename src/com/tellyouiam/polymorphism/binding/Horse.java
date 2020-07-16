@@ -1,4 +1,4 @@
-package com.tellyouiam.polymorphism.overloaded.and.overridden.method;
+package com.tellyouiam.polymorphism.binding;
 
 public class Horse extends Animal {
     public void eat() {
