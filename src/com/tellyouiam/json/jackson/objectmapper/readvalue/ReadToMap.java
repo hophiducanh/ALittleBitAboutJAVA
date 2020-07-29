@@ -27,18 +27,7 @@ public class ReadToMap {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		String json = "{\"discountedFee\":5.0,\"show`DiscountFee\":true,\"showContractNote\":true," +
-				"\"mareContract\":{\"yearFoaled\":\"2016\",\"lifeNumber\":\"000\",\"absMicrochipNumber\":\"001\"," +
-				"\"sire\":\"Zoffany\",\"dam\":\"Coniston Gem\",\"encumbrance\":false,\"encumbranceInfo\":\"\"," +
-				"\"stateNumber\":\"001\",\"coveringStallion\":\"Test Stallion\",\"lastServiceResult\":false," +
-				"\"lastServiceDate\":1594692000000,\"insurerName\":\"Test Insurer Email\",\"email\":\"minh" +
-				".le+12481824192@fruitful.io\",\"fax\":\"\",\"contactPerson\":\"Test Contract Insurer\"," +
-				"\"telMobile\":\"0333333333\"},\"agent\":{\"fullName\":\"Test Contract Insurer\"," +
-				"\"commissionRate\":\"10.0\",\"gstRegistered\":false,\"abn\":\"702774476200\",\"postalAddress\":\"2402" +
-				" Hunter Road, Gundy 2337, Australia\",\"contactPerson\":\"Test Contract Insurer\"," +
-				"\"telMobile\":\"0333333333\",\"email\":\"anh.hohihi@fruitful.io\"},\"walkOn\":{\"mareInFoal\":false," +
-				"\"maidenFoaler\":true,\"firstSeason\":true,\"stallion\":\"Winx\",\"lsd\":\"\"," +
-				"\"mareWalkOnFrom\":\"Victoria\",\"contactNameNumber\":\"Contact Name Number\"}}";
+		String json = "{\"servicefee\":{\"fee\":\"123\"},\"mareownercontract\":{\"contactperson\":null,\"streetaddress\":\"\",\"postaladdress\":null,\"email\":\"jed.adam17@test.gmail.com\",\"telMobile\":null,\"fax\":null,\"mobile\":\"0412922421\",\"fullName\":\"Geoff adams\",\"managingownerid\":438536,\"dob\":null,\"companyname\":null,\"gstregistered\":null,\"owners\":null,\"acn\":null,\"abn\":null,\"directorguaranteea\":null,\"directorguaranteeb\":null,\"directorguaranteec\":null,\"managingowner\":{\"contactperson\":null,\"streetaddress\":\"\",\"postaladdress\":null,\"email\":\"jed.adam17@test.gmail.com\",\"telMobile\":null,\"fax\":null,\"mobile\":\"0412922421\",\"fullName\":\"Geoff Adams\",\"managingOwnerId\":438536,\"dob\":null,\"companyName\":null,\"gstRegistered\":null,\"acn\":null,\"abn\":null,\"directorGuaranteeA\":null,\"directorGuaranteeB\":null,\"directorGuaranteeC\":null,\"owner\":{\"id\":438536},\"name\":\"Geoff adams\"}},\"walkoninfo\":{\"stallion\":{}}}";
 		
 		Map map = parseJsonToMap(json);
 		System.out.println(map);
