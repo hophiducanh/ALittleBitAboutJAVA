@@ -28,20 +28,17 @@ package com.tellyouiam.exception.exceptionpropagation.declaration;
  * Reference: https://www.geeksforgeeks.org/exception-propagation-java/
  * */
 public class UncheckedExceptionPropagation {
-    void m()
-    {
+    void m() {
         int data = 50 / 0; // unchecked exception occurred (Lưu ý rằng exception propagation chỉ áp dụng được cho unchecked exception)
         // exception propagated to n()
     }
 
-    void n()
-    {
+    void n() {
         m();
         // exception propagated to p()
     }
 
-    void p()
-    {
+    void p() {
         try {
             n(); // exception handled
         }
@@ -50,8 +47,7 @@ public class UncheckedExceptionPropagation {
         }
     }
 
-    public static void main(String args[])
-    {
+    public static void main(String[] args) {
         UncheckedExceptionPropagation obj = new UncheckedExceptionPropagation();
         obj.p();
         System.out.println("Normal flow...");
