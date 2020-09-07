@@ -1,5 +1,7 @@
 package com.tellyouiam.object.init;
 
+import com.tellyouiam.object.init.dto.Person;
+
 public class UsingNaiveMethod {
 	
 	public static void main(String[] args) {
