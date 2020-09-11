@@ -10,10 +10,16 @@ package com.tellyouiam.finalkeyword.declaration;
  * the compiler creates a new String object with the value of "Sam", and points the name reference to it.
  */
 public class FinalAndImmutabilityDifference {
+    public static String setter(String name, String name1) {
+        name = name1;
+        return name;
+    }
+    
     public static void main(String[] args) {
         //Final
         final String surname = "John";
         //name = "Sam" ---> compiler Error
+        System.out.println(setter(surname, "Logbasex"));
 
 
         //Immutable

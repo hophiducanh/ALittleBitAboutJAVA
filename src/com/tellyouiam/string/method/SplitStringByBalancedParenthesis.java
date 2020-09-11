@@ -7,7 +7,8 @@ import java.util.stream.Collectors;
 
 public class SplitStringByBalancedParenthesis {
 	public static void main(String[] args) {
-		String s = "Foxwedge/Here De Speaker 16 (Foxwedge - Here De Speaker) 3yo Bay Colt    Michael Hickmott Bloodstock - In training Michael Hickmott Bloodstock 15/01/2020";
+//		String s = "Foxwedge/Here De Speaker 16 (Foxwedge - Here De Speaker) 3yo Bay Colt    Michael Hickmott Bloodstock - In training Michael Hickmott Bloodstock 15/01/2020";
+		String s = "Manhattan Muse (AUS)/Dream Ahead (USA) 18 ( Dream Ahead (USA) - Manhattan Muse (AUS)) 2yo Bay Filly     Departed  13/02/2020";
 		int n = s.length();
 		int[] end = new int[n];
 		Stack<Integer> stack = new Stack<>();

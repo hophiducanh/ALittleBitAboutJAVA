@@ -1,4 +1,4 @@
-package com.tellyouiam.java8.enumset;
+package com.tellyouiam.java8.enums.enumset;
 
 import java.util.EnumSet;
 
