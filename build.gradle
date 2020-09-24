@@ -57,6 +57,7 @@ repositories {
 }
 
 dependencies {
+
 	// https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox
 	compile group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.19'
 
@@ -110,6 +111,13 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/io.astefanutti.metrics.aspectj/metrics-aspectj
 	compile group: 'io.astefanutti.metrics.aspectj', name: 'metrics-aspectj', version: '1.2.0'
+
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+	compile group: 'commons-io', name: 'commons-io', version: '2.7'
+
+	// More about apache common.
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
+	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
 }
 
 

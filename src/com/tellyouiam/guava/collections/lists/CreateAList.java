@@ -1,6 +1,5 @@
-package com.tellyouiam.guava.lists;
+package com.tellyouiam.guava.collections.lists;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
