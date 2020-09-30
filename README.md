@@ -17,3 +17,7 @@ Best Practice
 - The compilation process can take even more time with a wildcard import statement
 - For improved readability, wildcard import statements are bad practice for anything but throwaway classes
 - The compilation overhead of non-wildcard import statements are minor, but they give readability benefits so best practice is to use them
+
+# IO
+![](https://image.slidesharecdn.com/iostreamsv2-151225120725/95/java-input-output-and-file-handling-3-638.jpg?cb=1451045800)
+https://www.slideshare.net/sunilos/java-input-output-and-file-handling
