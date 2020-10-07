@@ -6,12 +6,40 @@ package com.tellyouiam.string.equal;
  * http://etutorials.org/Programming/Java+performance+tuning/Chapter+5.+Strings/5.2+Compile-Time+Versus+Runtime+Resolution+of+Strings/
  * */
 public class StringEquals {
+    
+    static class SimpleClass {
+        private String id;
+    
+        public SimpleClass(String id) {
+            this.id = id;
+        }
+    }
+    
     public static void main(String[] args) {
+        //https://www.infoworld.com/article/2073618/java-s-system-identityhashcode.html
         jack();
         jill();
         String a1 = new String("a");
         String a2 = new String("a");
+        String a3 = "a";
+        String a4 = "a";
         System.out.println("a1 compare s2 " + a1.equals(a2));
+        System.out.println(System.identityHashCode(a1));
+        System.out.println(System.identityHashCode(a2));
+        System.out.println(System.identityHashCode(a3));
+        System.out.println(System.identityHashCode(a4));
+        System.out.println(a3.hashCode()); //String.hashcode();
+    
+        Object object = null;
+        if (System.identityHashCode(object) == 0) {
+            System.out.println("hello");
+        }
+    
+        SimpleClass simpleClass = new SimpleClass("Hello");
+        SimpleClass simpleClass1 = new SimpleClass("Hello");
+        System.out.println(System.identityHashCode(simpleClass));
+        System.out.println(simpleClass.hashCode()); //object.hashCode();
+        
     }
 
     public static void jack() {

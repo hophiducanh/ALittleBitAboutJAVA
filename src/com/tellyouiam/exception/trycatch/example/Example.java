@@ -11,12 +11,12 @@ public class Example {
         // Để chắc chắn ứng dụng của chúng ta “khỏe mạnh”, bạn nên lường trước các tình huống có khả năng xảy ra Exception
         // và bao các đoạn code “có khả năng gây bệnh” vào khối try catch.
 
-        try {
+//        try {
             int[] num = {1, 2, 3, 4};
             System.out.println(num[5]);
             //Chạy thử đọc lỗi rồi lấy lỗi đó bỏ vào catch nhé.
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("can't find num[5] element in this array");
-        }
+//        } catch (ArrayIndexOutOfBoundsException e) {
+//            System.out.println("can't find num[5] element in this array");
+//        }
     }
 }

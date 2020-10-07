@@ -10,5 +10,6 @@ public class ListToArray {
 		ArrayList<String> newArrayList = Lists.newArrayList("One", "Two", "Three", "Four");
 		String[] strings = newArrayList.toArray(new String[]{});
 		System.out.println(Arrays.toString(strings));
+		System.out.println(newArrayList.get(0));
 	}
 }
