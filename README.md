@@ -21,3 +21,10 @@ Best Practice
 # IO
 ![](https://image.slidesharecdn.com/iostreamsv2-151225120725/95/java-input-output-and-file-handling-3-638.jpg?cb=1451045800)
 https://www.slideshare.net/sunilos/java-input-output-and-file-handling
+
+
+#Jackson
+Jackson is a suite of data-processing tools for Java comprising of [three components](https://www.quora.com/What-is-the-difference-between-fasterxmls-jackson-core-and-jackson-databind-Do-I-need-to-use-both-or-can-I-use-only-one-of-them/answer/Prashanth-Ambure):
+- [Streaming](https://www.baeldung.com/jackson-streaming-api) (jackson-core) defines low-level streaming APIs and includes JSON-specific implementations.
+- Annotations (jackson-annotations) contains standard Jackson annotations.
+- Databind (jackson-databind) implements data-binding (and object serialization) support on the streaming package. This package depends on both the streaming and annotations packages.
