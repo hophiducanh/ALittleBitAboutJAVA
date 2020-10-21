@@ -118,6 +118,9 @@ dependencies {
 	// More about apache common.
 	// https://mvnrepository.com/artifact/org.apache.commons/commons-collections4
 	compile group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+
+	// https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
+	compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.14'
 }
 
 
