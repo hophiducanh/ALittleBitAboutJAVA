@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-class PersonalAddress {
+public class PersonalAddress {
 	private String city;
 	private String country;
 	
