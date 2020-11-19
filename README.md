@@ -32,3 +32,6 @@ Jackson is a suite of data-processing tools for Java comprising of [three compon
 ### Problem and solution
 https://stackoverflow.com/questions/42622698/jackson-ignore-serialization-of-top-level-field-if-all-its-nested-fields-are-nul
 https://stackoverflow.com/questions/29630371/jackson-ignore-all-properties-of-superclass-from-external-library
+
+#### Print nested object
+  `new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(object)`
