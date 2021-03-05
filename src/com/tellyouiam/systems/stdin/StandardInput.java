@@ -1,4 +1,4 @@
-package com.tellyouiam.stdin.stdout;
+package com.tellyouiam.systems.stdin;
 /**
  * System.in.read() takes no arguments and returns an integer,
  * which has led some to believe that System.in.read() returns user-entered integer numbers.

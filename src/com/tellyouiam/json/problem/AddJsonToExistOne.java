@@ -3,11 +3,9 @@ package com.tellyouiam.json.problem;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.tellyouiam.json.jackson.jsonrootname.PersonalAddress;
 import org.json.JSONObject;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class AddJsonToExistOne {
@@ -20,13 +18,9 @@ public class AddJsonToExistOne {
 		Map<String, Object> biggerMap = mapper.readValue(firstJson, type);
 		Map<String, Object> smallerMap = mapper.readValue(secondJson, type);
 		
-		Map<String, Object> resultMap = new HashMap<>();
 		
-		resultMap.put("address", smallerMap);
-		resultMap.put("personal", biggerMap);
-		
-		String outJson = mapper.writeValueAsString(resultMap);
-		System.out.println(outJson);
+//		String outJson = mapper.writeValueAsString(resultMap);
+//		System.out.println(outJson);
 		
 		
 		//---------------------------Using JSONObject

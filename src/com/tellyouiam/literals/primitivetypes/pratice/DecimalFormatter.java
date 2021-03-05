@@ -1,5 +1,7 @@
 package com.tellyouiam.literals.primitivetypes.pratice;
 
+import java.text.DecimalFormat;
+
 public class DecimalFormatter {
     public static void main(String[] args) {
         String value = "$2,016.88".replace("$", "");
@@ -10,5 +12,8 @@ public class DecimalFormatter {
 
         Double cellValue = Double.parseDouble(doubleValueStr);
         System.out.println(cellValue);
+        
+        DecimalFormat decimalFormat = new DecimalFormat("#,##0.##");
+        System.out.println(decimalFormat.format(5.0));
     }
 }
