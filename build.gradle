@@ -132,6 +132,9 @@ dependencies {
 
 	// https://mvnrepository.com/artifact/com.j2html/j2html
 	compile group: 'com.j2html', name: 'j2html', version: '1.3.0'
+
+	// https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 }
 
 
