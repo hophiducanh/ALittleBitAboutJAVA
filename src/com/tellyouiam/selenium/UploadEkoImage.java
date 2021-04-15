@@ -39,118 +39,37 @@ public class UploadEkoImage {
 	
 	public static void main(String[] args) throws InterruptedException, IOException { //https://www.geeksforgeeks.org/login-twitter-using-python-selenium/
 		List<String> list = new ArrayList<>();
-		list.add("Pitbull");
-		list.add("Avril Lavigne");
-		list.add("Enrique Iglesias");
-		list.add("Lil Wayne");
-		list.add("AKON");
-		list.add("Jennifer Lopez");
-		list.add("Miley Cyrus");
-		list.add("Usher");
-		list.add("Chris Brown");
-		list.add("Black Eyed Peas");
-		list.add("Wiz Khalifa");
-		list.add("Coldplay");
-		list.add("Maroon 5");
-		list.add("Britney Spears");
-		list.add("Justin Timberlake");
-		list.add("Demi Lovato");
-		list.add("One Direction");
-		list.add("Drake");
-		list.add("Snoop Dogg");
-		list.add("50 Cent");
-		list.add("Nicole Kidman");
-		list.add("Hugh Jackman");
-		list.add("Cate Blanchett");
-		list.add("Rose Byrne");
-		list.add("The Rock");
-		list.add("David Beckham");
-		list.add("Ronaldinho Gaúcho");
-		list.add("James Rodriguez");
-		list.add("Mesut Özil");
-		list.add("Gareth Bale");
-		list.add("Andrés Iniesta");
-		list.add("Zlatan Ibrahimović");
-		list.add("Iker Casillas");
-		list.add("Wayne Rooney");
-		list.add("David Luiz");
-		list.add("Sergio Ramos");
-		list.add("Karim Benzema");
-		list.add("Roman Reigns");
-		list.add("Marcelo Vieira");
-		list.add("Gerard Piqué");
-		list.add("Randy Orton");
-		list.add("Rafa Nadal");
-		list.add("Robin van Persie");
-		list.add("Rey Mysterio");
-		list.add("Marco Reus");
-		list.add("Mohamed Salah");
-		list.add("Toni Kroos");
-		list.add("Triple H");
-		list.add("Cleveland Cavaliers");
-		list.add("Detroit Pistons");
-		list.add("Indiana Pacers");
-		list.add("Milwaukee Bucks");
-		list.add("Atlanta Hawks");
-		list.add("Charlotte Hornets");
-		list.add("Miami Heat");
-		list.add("Orlando Magic");
-		list.add("Washington Wizards");
-		list.add("Denver Nuggets");
-		list.add("Minnesota Timberwolves");
-		list.add("Oklahoma City Thunder");
-		list.add("Portland Trail Blazers");
-		list.add("Utah Jazz");
-		list.add("Golden State Warriors");
-		list.add("Los Angeles Clippers");
-		list.add("Los Angeles Lakers");
-		list.add("Phoenix Suns");
-		list.add("Sacramento Kings");
-		list.add("Dallas Mavericks");
-		list.add("Houston Rockets");
-		list.add("Memphis Grizzlies");
-		list.add("New Orleans Pelicans");
-		list.add("San Antonio Spurs");
-		list.add("Gold Coast");
-		list.add("Greater Western Sydney");
-		list.add("Hawthorn");
-		list.add("Melbourne");
-		list.add("North Melbourne");
-		list.add("Port Adelaide");
-		list.add("Richmond");
-		list.add("St Kilda");
-		list.add("Sydney");
-		list.add("West Coast");
-		list.add("Western Bulldogs");
-		list.add("Everton");
-		list.add("Leicester City");
-		list.add("Liverpool");
-		list.add("Manchester City");
-		list.add("Manchester United");
-		list.add("Newcastle United");
-		list.add("Norwich City");
-		list.add("Sheffield United");
-		list.add("Southampton");
-		list.add("Tottenham Hotspur");
-		list.add("Watford");
-		list.add("West Ham United");
-		list.add("Wolverhampton Wanderers");
+//		list.add("Afghanistan Cricket");
+//		list.add("Australia Cricket");
+//		list.add("Bangladesh Cricket");
+//		list.add("England Cricket");
+//		list.add("India Cricket");
+//		list.add("Ireland Cricket");
+//		list.add("New Zealand Criket");
+		list.add("Pakistan Criket");
+//		list.add("South Africa Cricket");
+//		list.add("Sri Lanka Cricket");
+//		list.add("Windies Cricket");
+//		list.add("Zimbabwe Cricket");
 		
 		List<String> emails = list.stream().map(name -> {
 			String normalizeName = StringUtils.deleteWhitespace(name).toLowerCase();
 			return String.format("%s%s", normalizeName, "@test.com");
 		}).collect(Collectors.toList());
 		
-//		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-		System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//		System.setProperty("webdriver.gecko.driver", "/usr/bin/geckodriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
 //		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--start-maximized");
+
 //		chromeOptions.addArguments("--no-sandbox");
 		
-		WebDriver driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+//		WebDriver driver = new FirefoxDriver();
+		WebDriver driver = new ChromeDriver(chromeOptions);
+		//driver.manage().window().maximize();
 		
-		driver.get("https://localhost:5151/portal/app/login");
+		driver.get("https://staging.cliquefan.com/login");
 		
 		for (String userEmail : emails) {
 			String usernamePath = "/html/body/div[1]/main/div/div[2]/div/div[1]/form/div[1]/div/input";
@@ -173,7 +92,11 @@ public class UploadEkoImage {
 			WebDriverWait wait = new WebDriverWait(driver,10);
 			Actions actions = new Actions(driver);
 			//click drop down
-			WebElement dropDownElement = driver.findElement(By.cssSelector("li[class='ant-menu-item']"));
+//			WebElement dropDownElement = driver.findElement(By.cssSelector("li[class='ant-menu-item']"));
+			TimeUnit.SECONDS.sleep(1);
+			WebElement dropDownElement = driver.findElements(By.cssSelector("li[class='ant-menu-item']")).stream()
+					.filter(webElement -> webElement.getText().contains("Edit Profile"))
+					.findFirst().get();
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", dropDownElement);
 //			actions.moveToElement(dropDownElement).click();
 //			wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("li[class='ant-menu-item']"))).click();
@@ -198,7 +121,7 @@ public class UploadEkoImage {
 					.withTimeout(Duration.ofMinutes(1))
 					.ignoring(NoSuchElementException.class, ElementClickInterceptedException.class);
 			
-			String avatarImg = "/home/logbasex/Desktop/images/" + StringUtils.remove(userEmail, "@test.com")
+			String avatarImg = "/home/logbasex/Desktop/images-clone/" + StringUtils.remove(userEmail, "@test.com")
 					.concat("-avatar.png");
 			
 			if (Files.exists(Paths.get(avatarImg))) {
@@ -206,7 +129,7 @@ public class UploadEkoImage {
 						.sendKeys(avatarImg);
 			}
 			
-			String backgroundImg = "/home/logbasex/Desktop/images/" + StringUtils.remove(userEmail, "@test.com")
+			String backgroundImg = "/home/logbasex/Desktop/images-clone/" + StringUtils.remove(userEmail, "@test.com")
 					.concat("-background.png");
 			
 			if (Files.exists(Paths.get(backgroundImg))) {
@@ -226,7 +149,7 @@ public class UploadEkoImage {
 			TimeUnit.SECONDS.sleep(2);
 			driver.findElement(By.xpath(openDropdown)).click();
 			TimeUnit.SECONDS.sleep(2);
-			((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".ant-menu-light > li:nth-child(4)")));
+			((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".ant-menu-light > li:nth-child(3)")));
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[2]"))).click();
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/main/section/div[2]/div/div/a[2]"))).click();
 			

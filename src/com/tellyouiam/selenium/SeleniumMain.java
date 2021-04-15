@@ -18,7 +18,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.concurrent.TimeUnit;
 
-public class Test {
+public class SeleniumMain {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -61,11 +61,14 @@ public class Test {
 		TimeUnit.MICROSECONDS.sleep(500);
 		String backgroundUrl = driver.findElement(By.xpath(backgroundImgPath)).getAttribute("src");
 		
+		String avatarImg = "/home/logbasex/Desktop/avatar.png";
+		String backgroundImg = "/home/logbasex/Desktop/background.png";
+		
 		try (InputStream avatarIS = new URL(avatarUrl).openStream();
 		     InputStream backgroundIS = new URL(backgroundUrl).openStream()) {
 			
-			Files.copy(avatarIS, Paths.get("/home/logbasex/Desktop/avatar.png"), StandardCopyOption.REPLACE_EXISTING);
-			Files.copy(backgroundIS, Paths.get("/home/logbasex/Desktop/background.png"), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(avatarIS, Paths.get(avatarImg), StandardCopyOption.REPLACE_EXISTING);
+			Files.copy(backgroundIS, Paths.get(backgroundImg), StandardCopyOption.REPLACE_EXISTING);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -73,14 +76,14 @@ public class Test {
 		
 		TimeUnit.SECONDS.sleep(5);
 		
-		driver.get("https://test.cliquefan.com/login");
+		driver.get("http://localhost:5000/login");
 		
 		String usernamePath = "/html/body/div[1]/main/div/div[2]/div/div[1]/form/div[1]/div/input";
 		String passwordPath = "/html/body/div[1]/main/div/div[2]/div/div[1]/form/div[2]/div/input";
 		String loginPath = "/html/body/div[1]/main/div/div[2]/div/div[1]/form/button";
 		
 		TimeUnit.SECONDS.sleep(2);
-		String userEmail = "minh.vu+fan100@fruitful.io";
+		String userEmail = "me@gmail.com";
 		driver.findElement(By.xpath(usernamePath)).sendKeys(userEmail); //right click elemt -> copy xpath
 		driver.findElement(By.xpath(passwordPath)).sendKeys("12345678");
 		driver.findElement(By.xpath(loginPath)).click();
@@ -95,29 +98,26 @@ public class Test {
 		TimeUnit.SECONDS.sleep(1);
 		WebElement dropDownElement = driver.findElements(By.cssSelector("li[class='ant-menu-item']")).stream()
 				.filter(webElement -> webElement.getText().contains("Edit Profile"))
-				.findFirst().orElse(null);
+				.findFirst().orElseThrow(RuntimeException::new);
 		
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", dropDownElement);
+		dropDownElement.click();
 		
 		TimeUnit.MICROSECONDS.sleep(4000);
 		//https://stackoverflow.com/questions/49864965/org-openqa-selenium-elementnotinteractableexception-element-is-not-reachable-by
 		
 		WebDriverWait waitAvatar = new WebDriverWait(driver,20);
-		((JavascriptExecutor)driver).executeScript("document.querySelector('.css-25nxdc > div:nth-child(1) > input:nth-child(1)').style.display='block';");
-		((JavascriptExecutor)driver).executeScript("document.querySelector('.css-127kq4m > div:nth-child(1) > input:nth-child(1)').style.display='block';");
+		((JavascriptExecutor)driver).executeScript("document.querySelector('.css-25nxdc > div:nth-child(1) > input:nth-child(1)').style.display='block'");
+		((JavascriptExecutor)driver).executeScript("document.querySelector('.css-127kq4m > div:nth-child(1) > input:nth-child(1)').style.display='block'");
 		
 		//path after make display block, not path when display none
 		String back = "/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/form/div[1]/div/div[1]/div/div/div/div/div/div/input";
 		String avatar = "/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/form/div[1]/div/div[2]/div/div/div/div/div/div/input";
 		
-		String avatarImg = "/home/logbasex/Desktop/avatar.png";
 		
 		if (Files.exists(Paths.get(avatarImg))) {
 			waitAvatar.until(ExpectedConditions.elementToBeClickable(By.xpath(avatar)))
 					.sendKeys(avatarImg);
 		}
-		
-		String backgroundImg = "/home/logbasex/Desktop/background.png";
 		
 		if (Files.exists(Paths.get(backgroundImg))) {
 			waitAvatar.until(ExpectedConditions.elementToBeClickable(By.xpath(back)))
@@ -133,5 +133,7 @@ public class Test {
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", driver.findElement(By.cssSelector(".ant-menu-light > li:nth-child(3)")));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[4]/div/div[2]/div/div[2]/div[3]/button[2]"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/main/section/div[2]/div/div/a[2]"))).click();
+		
+		driver.quit();
 	}
 }

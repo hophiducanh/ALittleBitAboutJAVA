@@ -25,7 +25,7 @@ public class CrawlTwitterImage {
 	public static void main(String[] args) throws InterruptedException { //https://www.geeksforgeeks.org/login-twitter-using-python-selenium/
 		List<String> list = new ArrayList<>();
 //		list.add("Pitbull");
-//		list.add("Avril Lavigne");
+//		list.add("Avril Lavigne");tttttt
 //		list.add("Enrique Iglesias");
 //		list.add("Lil Wayne");
 //		list.add("AKON");
@@ -95,41 +95,31 @@ public class CrawlTwitterImage {
 //		list.add("Houston Rockets");
 //		list.add("Memphis Grizzlies");
 //		list.add("New Orleans Pelicans");
-		list.add("San Antonio Spurs");
-		list.add("Gold Coast");
-		list.add("Greater Western Sydney");
-		list.add("Hawthorn");
-		list.add("Melbourne");
-		list.add("North Melbourne");
-		list.add("Port Adelaide");
-		list.add("Richmond");
-		list.add("St Kilda");
-		list.add("Sydney");
-		list.add("West Coast");
-		list.add("Western Bulldogs");
-		list.add("Everton");
-		list.add("Leicester City");
-		list.add("Liverpool");
-		list.add("Manchester City");
-		list.add("Manchester United");
-		list.add("Newcastle United");
-		list.add("Norwich City");
-		list.add("Sheffield United");
-		list.add("Southampton");
-		list.add("Tottenham Hotspur");
-		list.add("Watford");
-		list.add("West Ham United");
-		list.add("Wolverhampton Wanderers");
+		
+		
+		list.add("Afghanistan Cricket");
+		list.add("Australia Cricket");
+		list.add("Bangladesh Cricket");
+		list.add("England Cricket");
+		list.add("India Cricket");
+		list.add("Ireland Cricket");
+		list.add("New Zealand Cricket");
+		list.add("Pakistan Cricket");
+		list.add("South Africa Cricket");
+		list.add("Sri Lanka Cricket");
+		list.add("Windies Cricket");
+		list.add("Zimbabwe Cricket");
 		
 		Map<String, String> images = new HashMap<>();
  	
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions chromeOptions = new ChromeOptions();
-//		chromeOptions.addArguments("--headless");
+		chromeOptions.addArguments("--start-maximized");
+//		chromeOptions.addArguments("--headless");1
 //		chromeOptions.addArguments("--no-sandbox");
 		
 		WebDriver driver = new ChromeDriver(chromeOptions);
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 		driver.get("http://www.twitter.com/login");
 //		driver.findElement(By.xpath("//*[@id=\"react-root\"]/div/div/div[2]/main/div/div/div[2]/form/div/div[1]/label/div/div[2]/div/input")).sendKeys("contact.hoducanh@gmail.com"); //right click elemt -> copy xpath
@@ -138,15 +128,15 @@ public class CrawlTwitterImage {
 		String loginPath = "/html/body/div/div/div/div[2]/main/div/div/div[2]/form/div/div[3]/div";
 		
 		TimeUnit.SECONDS.sleep(1);
-		driver.findElement(By.xpath(userNamePath)).sendKeys("username"); //right click elemt -> copy xpath
-		driver.findElement(By.xpath(passwordPath)).sendKeys("password");
+		driver.findElement(By.xpath(userNamePath)).sendKeys("contact.hoducanh@gmail.com"); //right click elemt -> copy xpath
+		driver.findElement(By.xpath(passwordPath)).sendKeys("DUCanh851997");
 		driver.findElement(By.xpath(loginPath)).click();
 		TimeUnit.SECONDS.sleep(2);
 		
 		
 		for (String key : list) {
 			String keyword = key + " filter:verified";
-			
+//			String keyword = key;
 			driver.findElement(By.xpath("/html/body/div/div/div/div[2]/main/div/div/div/div[2]/div/div[2]/div/div/div/div[1]/div/div/div/form/div[1]/div/div/div[2]/input"))
 					.sendKeys(keyword, Keys.ENTER);
 			
@@ -190,6 +180,19 @@ public class CrawlTwitterImage {
 			System.out.println(key + " FOLLOWERS: " + followers);
 			System.out.println("*********************\n");
 			TimeUnit.MICROSECONDS.sleep(500);
+			
+			try (InputStream in = new URL(avatarUrl).openStream()) {
+				Files.copy(in, Paths.get("/home/logbasex/Desktop/images-clone/" + StringUtils.deleteWhitespace(key)
+						.toLowerCase() + "-avatar.png"), StandardCopyOption.REPLACE_EXISTING);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+			try (InputStream in = new URL(backgroundUrl).openStream()) {
+				Files.copy(in, Paths.get("/home/logbasex/Desktop/images-clone/" + StringUtils.deleteWhitespace(key).toLowerCase() + "-background.png"), StandardCopyOption.REPLACE_EXISTING);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 		
 		images.forEach((k,v) -> {
